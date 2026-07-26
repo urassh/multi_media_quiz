@@ -8,7 +8,11 @@ const TYPE_LABELS: Record<QuestionType, string> = {
   choice: '4択',
   number: '数字入力',
   term: '用語入力',
+  essay: '記述',
 }
+
+/** 記述問題は採点ポイントのこの割合以上をカバーできていれば正解扱い */
+const ESSAY_PASS_RATIO = 0.7
 
 const COUNT_OPTIONS = [10, 20, 30] as const
 
@@ -234,6 +238,8 @@ function correctAnswerText(q: Question): string {
       return `${q.answerNumber}${q.unit ?? ''}`
     case 'term':
       return q.answers[0]
+    case 'essay':
+      return q.keyPoints.join(' ／ ')
   }
 }
 
@@ -252,6 +258,9 @@ function QuestionCard({
   const [correct, setCorrect] = useState(false)
   const [input, setInput] = useState('')
   const [chosen, setChosen] = useState<number | null>(null)
+  // 記述問題用: 模範解答の表示状態とチェック済み採点ポイント
+  const [revealed, setRevealed] = useState(false)
+  const [checkedPoints, setCheckedPoints] = useState<Set<number>>(new Set())
 
   // 4択の選択肢は問題ごとに順序をシャッフルして表示する
   const order = useMemo(() => {
@@ -286,6 +295,21 @@ function QuestionCard({
       const ok = question.answers.some((a) => normalizeTerm(a) === norm)
       finish(input, ok)
     }
+  }
+
+  function togglePoint(i: number) {
+    if (answered) return
+    setCheckedPoints((prev) => {
+      const next = new Set(prev)
+      next.has(i) ? next.delete(i) : next.add(i)
+      return next
+    })
+  }
+
+  function gradeEssay() {
+    if (question.type !== 'essay' || answered) return
+    const ok = checkedPoints.size / question.keyPoints.length >= ESSAY_PASS_RATIO
+    finish(input, ok)
   }
 
   return (
@@ -336,10 +360,67 @@ function QuestionCard({
         </>
       )}
 
+      {question.type === 'essay' && (
+        <>
+          <textarea
+            className="essay-input"
+            rows={5}
+            placeholder="本番のつもりで自分の言葉で書く (キーワードの箇条書きでも可)"
+            value={input}
+            disabled={revealed}
+            onChange={(e) => setInput(e.target.value)}
+            autoFocus
+          />
+          {!revealed && (
+            <button className="primary-btn" onClick={() => setRevealed(true)}>
+              模範解答と照合する
+            </button>
+          )}
+          {revealed && (
+            <div className="model-answer">
+              <div className="model-answer-label">模範解答</div>
+              <p className="model-answer-text">{question.modelAnswer}</p>
+              <div className="model-answer-label">
+                採点ポイント {answered ? `(${checkedPoints.size}/${question.keyPoints.length})` : '— 自分の答案でカバーできていたものをチェック'}
+              </div>
+              {question.keyPoints.map((p, i) => (
+                <label key={i} className="keypoint">
+                  <input
+                    type="checkbox"
+                    checked={checkedPoints.has(i)}
+                    disabled={answered}
+                    onChange={() => togglePoint(i)}
+                  />
+                  <span>{p}</span>
+                </label>
+              ))}
+              {!answered && (
+                <>
+                  <button className="primary-btn" onClick={gradeEssay}>
+                    自己採点を確定 ({checkedPoints.size}/{question.keyPoints.length})
+                  </button>
+                  <p className="count-note">
+                    ポイントの{Math.round(ESSAY_PASS_RATIO * 100)}%以上で正解扱いになります
+                  </p>
+                </>
+              )}
+            </div>
+          )}
+        </>
+      )}
+
       {answered && (
         <>
           <div className={`feedback ${correct ? 'correct' : 'wrong'}`}>
-            <div className="verdict">{correct ? '⭕ 正解!' : `❌ 不正解 — 正解: ${correctAnswerText(question)}`}</div>
+            <div className="verdict">
+              {question.type === 'essay'
+                ? correct
+                  ? '⭕ 合格ライン!'
+                  : '❌ 要復習 — 模範解答を音読してからやり直すと定着します'
+                : correct
+                  ? '⭕ 正解!'
+                  : `❌ 不正解 — 正解: ${correctAnswerText(question)}`}
+            </div>
             {question.explanation}
           </div>
           <button className="primary-btn" onClick={onNext}>

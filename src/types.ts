@@ -1,4 +1,4 @@
-export type QuestionType = 'choice' | 'number' | 'term'
+export type QuestionType = 'choice' | 'number' | 'term' | 'essay'
 
 export interface BaseQuestion {
   id: string
@@ -31,7 +31,15 @@ export interface TermQuestion extends BaseQuestion {
   answers: string[]
 }
 
-export type Question = ChoiceQuestion | NumberQuestion | TermQuestion
+export interface EssayQuestion extends BaseQuestion {
+  type: 'essay'
+  /** 模範解答 (本番でそのまま書ける分量の文章) */
+  modelAnswer: string
+  /** 採点ポイント。自己採点でカバーできたものをチェックする */
+  keyPoints: string[]
+}
+
+export type Question = ChoiceQuestion | NumberQuestion | TermQuestion | EssayQuestion
 
 export interface AnswerRecord {
   question: Question
