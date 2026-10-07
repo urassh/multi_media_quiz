@@ -1,0 +1,2735 @@
+{
+  "lectureLabels": {
+    "1": "第1回 イントロ・標準化",
+    "2": "第2回 映像フォーマット",
+    "3": "第3回 音響・音声フォーマット",
+    "4": "第4回 文字コード",
+    "5": "第5回 機器インタフェース",
+    "6": "第6回 ファイルフォーマット",
+    "7": "第7回 映像符号化",
+    "8": "第8回 音響・音声符号化",
+    "9": "第9回 デジタル放送",
+    "10": "第10回 インターネット",
+    "11": "第11回 モバイル・UX・API",
+    "12": "第12回 メタデータ",
+    "13": "第13回 権利管理・ハイブリッド"
+  },
+  "questions": [
+    {
+      "id": "l01-01",
+      "lecture": 1,
+      "topic": "3つのC",
+      "type": "choice",
+      "question": "メディアの「3つのC」のうち、「コンテナ (Container)」が指すものはどれか?",
+      "choices": [
+        "標準化されたデータ形式 (AAC, JPEG, MPEG-4 など)",
+        "やり取りされる情報の内容 (ニュース・作品)",
+        "提示手段 (TV, スマホ, PC)",
+        "通信回線の帯域"
+      ],
+      "answerIndex": 0,
+      "explanation": "コンテンツ=情報の内容、コンテナ=標準化されたデータ形式、コンベア=提示手段。この科目は主にコンテナ (標準化されたデータ) を扱う。"
+    },
+    {
+      "id": "l01-02",
+      "lecture": 1,
+      "topic": "アナログとデジタル",
+      "type": "term",
+      "question": "光の三原色 RGB を重ねると白になる混色方式を何というか?",
+      "answers": [
+        "加法混色",
+        "加色混色",
+        "additive color"
+      ],
+      "explanation": "加法混色=RGB (ディスプレイ、光を足すと白)。対して減法混色=CMY (印刷、重ねると黒)。"
+    },
+    {
+      "id": "l01-03",
+      "lecture": 1,
+      "topic": "アナログとデジタル",
+      "type": "choice",
+      "question": "「アナログ」の語源 analogia の意味はどれか?",
+      "choices": [
+        "比例",
+        "指",
+        "連続",
+        "波"
+      ],
+      "answerIndex": 0,
+      "explanation": "アナログ= analogia (比例)、連続した値。デジタル= digitus (指)、離散した値。"
+    },
+    {
+      "id": "l01-04",
+      "lecture": 1,
+      "topic": "映像走査",
+      "type": "choice",
+      "question": "「1080i」の「i」が表す走査方式はどれか?",
+      "choices": [
+        "インタレース (奇数行と偶数行を交互に送る)",
+        "プログレッシブ (1行目から順に全部送る)",
+        "インデックス (位置情報付き走査)",
+        "アイソクロナス (等時走査)"
+      ],
+      "answerIndex": 0,
+      "explanation": "i=インタレース (飛び越し走査)。同じ解像度で帯域を半分にできるアナログ時代の名残。p=プログレッシブ (順次走査)。"
+    },
+    {
+      "id": "l01-05",
+      "lecture": 1,
+      "topic": "インターネット",
+      "type": "number",
+      "question": "IPv6 のアドレス長は何 bit か? (IPv4 は 32bit)",
+      "answerNumber": 128,
+      "unit": "bit",
+      "explanation": "IPv6 (RFC 2460) は 32bit → 128bit に拡張。拡張ヘッダ方式で基本ヘッダを簡素化しルータ負荷も軽減。"
+    },
+    {
+      "id": "l01-06",
+      "lecture": 1,
+      "topic": "標準化団体",
+      "type": "choice",
+      "question": "ISO の正式名称 (役割) はどれか?",
+      "choices": [
+        "国際標準化機構",
+        "国際電気通信連合",
+        "電気電子技術者協会",
+        "電気・電子分野の国際標準化団体"
+      ],
+      "answerIndex": 0,
+      "explanation": "ISO=国際標準化機構。IEC=電気・電子分野の国際標準化団体、ITU=国際電気通信連合、IEEE=電気電子技術者協会。"
+    },
+    {
+      "id": "l01-07",
+      "lecture": 1,
+      "topic": "標準化団体",
+      "type": "term",
+      "question": "電気・電子分野を担当する国際標準化団体は? (ISO と合同で JTC1 を作る)",
+      "answers": [
+        "IEC",
+        "国際電気標準会議"
+      ],
+      "explanation": "IEC (国際電気標準会議)。ISO/IEC JTC1 の SC29 で MPEG などマルチメディア規格を標準化している。"
+    },
+    {
+      "id": "l01-08",
+      "lecture": 1,
+      "topic": "標準化団体",
+      "type": "term",
+      "question": "通信分野の規格を扱う国連の専門機関は? (BT.709 や H.264 などの勧告を出す)",
+      "answers": [
+        "ITU",
+        "国際電気通信連合"
+      ],
+      "explanation": "ITU (国際電気通信連合)。無線・放送系は ITU-R、通信系は ITU-T が勧告を出す。"
+    },
+    {
+      "id": "l01-09",
+      "lecture": 1,
+      "topic": "標準化団体",
+      "type": "choice",
+      "question": "日本国内の通信・放送分野の民間標準規格 (STD-B32 など) を策定する団体はどれか?",
+      "choices": [
+        "ARIB (電波産業会)",
+        "SMPTE",
+        "IETF",
+        "W3C"
+      ],
+      "answerIndex": 0,
+      "explanation": "ARIB=日本の電波産業会。SMPTE=米国映画テレビ技術者協会、IETF=インターネット (RFC)、W3C=Web の標準化団体。"
+    },
+    {
+      "id": "l01-10",
+      "lecture": 1,
+      "topic": "標準化",
+      "type": "choice",
+      "question": "標準化の本質として最も適切なものはどれか?",
+      "choices": [
+        "単純化・秩序化・試験評価の統一により互換性・品質・安全性を確保し、仕様書を制定・普及させる活動",
+        "最も高性能な方式を法律で強制する活動",
+        "特許を無償化して技術を共有する活動",
+        "製品の価格を統一する活動"
+      ],
+      "answerIndex": 0,
+      "explanation": "標準化とは仕様書を制定して普及させることで互換性・品質・性能・安全性を確保する活動。規格に従えば異なるメーカの機器同士でも相互運用できる。"
+    },
+    {
+      "id": "l02-01",
+      "lecture": 2,
+      "topic": "解像度",
+      "type": "number",
+      "question": "フルHD (1080p) の水平画素数は? (垂直は 1080)",
+      "answerNumber": 1920,
+      "unit": "×1080",
+      "explanation": "HDTV/2K = 1920×1080 (約200万画素)。SDTV の約6倍。"
+    },
+    {
+      "id": "l02-02",
+      "lecture": 2,
+      "topic": "解像度",
+      "type": "number",
+      "question": "4K UHDTV の水平画素数は? (垂直は 2160)",
+      "answerNumber": 3840,
+      "unit": "×2160",
+      "explanation": "4K = 3840×2160 (約800万画素)。2K の4倍。"
+    },
+    {
+      "id": "l02-03",
+      "lecture": 2,
+      "topic": "解像度",
+      "type": "number",
+      "question": "8K UHDTV の水平画素数は? (垂直は 4320)",
+      "answerNumber": 7680,
+      "unit": "×4320",
+      "explanation": "8K = 7680×4320 (約3200万画素)。4K の4倍。"
+    },
+    {
+      "id": "l02-04",
+      "lecture": 2,
+      "topic": "標本化と量子化",
+      "type": "choice",
+      "question": "映像・音声のデジタル化における「量子化」の説明として正しいものはどれか?",
+      "choices": [
+        "振幅方向を有限の段階に離散化すること",
+        "時間・空間方向を一定間隔で離散化すること",
+        "周波数成分に変換すること",
+        "冗長な情報を取り除くこと"
+      ],
+      "answerIndex": 0,
+      "explanation": "標本化=時間/空間方向の離散化、量子化=振幅方向の離散化。両者を混同しないこと。"
+    },
+    {
+      "id": "l02-05",
+      "lecture": 2,
+      "topic": "視野角と観視距離",
+      "type": "number",
+      "question": "HDTV (2K) の標準観視距離は画面高さの何倍か? (ITU-R BT.2022)",
+      "answerNumber": 3.2,
+      "unit": "H",
+      "explanation": "標準観視距離: HDTV=3.2H (視野角約31°)、4K=1.6H (58°)、8K=0.75H (96°)。試験頻出の表。"
+    },
+    {
+      "id": "l02-06",
+      "lecture": 2,
+      "topic": "視野角と観視距離",
+      "type": "number",
+      "question": "4K の標準観視距離は画面高さの何倍か?",
+      "answerNumber": 1.6,
+      "unit": "H",
+      "explanation": "4K=1.6H で視野角約58°。画素密度が高いほど近づいて見られるため観視距離が短くなる。"
+    },
+    {
+      "id": "l02-07",
+      "lecture": 2,
+      "topic": "視野角と観視距離",
+      "type": "number",
+      "question": "8K の標準観視距離は画面高さの何倍か?",
+      "answerNumber": 0.75,
+      "unit": "H",
+      "explanation": "8K=0.75H で視野角約96° (≈100°)。臨場感の飽和領域 (80〜100°) をカバーする設計。"
+    },
+    {
+      "id": "l02-08",
+      "lecture": 2,
+      "topic": "視野角と観視距離",
+      "type": "choice",
+      "question": "8K の標準観視距離における視野角はおよそ何度か?",
+      "choices": [
+        "約100度 (96度)",
+        "約30度",
+        "約58度",
+        "約140度"
+      ],
+      "answerIndex": 0,
+      "explanation": "HDTV≈31°、4K≈58°、8K≈96° (約100°)。視野角が大きいほど臨場感が増す。"
+    },
+    {
+      "id": "l02-09",
+      "lecture": 2,
+      "topic": "視覚特性",
+      "type": "choice",
+      "question": "視力1.0の人が識別できる限界の角度はどれか? (画素数設計の根拠)",
+      "choices": [
+        "1分 (1/60度)",
+        "1度",
+        "1秒 (1/3600度)",
+        "10分 (1/6度)"
+      ],
+      "answerIndex": 0,
+      "explanation": "視力1.0の識別限界は視角1分 (1/60度)。この限界と視野角・観視距離から必要画素数が決まる。"
+    },
+    {
+      "id": "l02-10",
+      "lecture": 2,
+      "topic": "臨場感と実物感",
+      "type": "choice",
+      "question": "「臨場感」と「実物感」の関係として正しいものはどれか?",
+      "choices": [
+        "臨場感は視野角を大きく、実物感は画素密度を高くすると増す。画面に近づくと臨場感は増すが実物感は下がる相反関係",
+        "両方とも画素数だけで決まる",
+        "臨場感は音響のみで決まり映像とは無関係",
+        "実物感は視野角に比例して増える"
+      ],
+      "answerIndex": 0,
+      "explanation": "臨場感 (その場に居る感) は視野角↑、実物感 (本物だ感) は画素密度↑で増し、互いに相反する。技術レベルで妥協点を決めてきた。"
+    },
+    {
+      "id": "l02-11",
+      "lecture": 2,
+      "topic": "視覚特性",
+      "type": "term",
+      "question": "大画面に誘導されて姿勢が傾くなど、映像で自己運動感覚が生じる効果を何というか? (臨場感の客観指標)",
+      "answers": [
+        "ベクション",
+        "視覚誘導性自己運動感覚",
+        "vection"
+      ],
+      "explanation": "ベクション (視覚誘導性自己運動感覚)。視野角20度から誘導が始まり、80〜100度で飽和する。"
+    },
+    {
+      "id": "l02-12",
+      "lecture": 2,
+      "topic": "視覚特性",
+      "type": "term",
+      "question": "ちらつき (フリッカ) が見えなくなる限界の周波数を何というか? (アルファベット3文字でも可)",
+      "answers": [
+        "CFF",
+        "臨界融合周波数",
+        "臨界フリッカ周波数",
+        "critical fusion frequency"
+      ],
+      "explanation": "CFF (臨界融合周波数)。視野角30° (2K) で約65Hz、視野角100° (8K) で約80Hz。周辺視野はフリッカに敏感なので大画面ほど高フレームレートが必要。"
+    },
+    {
+      "id": "l02-13",
+      "lecture": 2,
+      "topic": "規格",
+      "type": "choice",
+      "question": "4K/8K (UHDTV) の色域などを定める ITU-R 勧告はどれか?",
+      "choices": [
+        "BT.2020",
+        "BT.709",
+        "BT.601",
+        "BS.775"
+      ],
+      "answerIndex": 0,
+      "explanation": "SDTV=BT.601、HDTV=BT.709、UHDTV=BT.2020。BS.775 は 5.1ch スピーカ配置の勧告。"
+    },
+    {
+      "id": "l03-01",
+      "lecture": 3,
+      "topic": "標本化周波数",
+      "type": "number",
+      "question": "CD の標本化周波数は何 kHz か?",
+      "answerNumber": 44.1,
+      "unit": "kHz",
+      "explanation": "CD=44.1kHz。可聴域上限 20kHz の2倍以上 (標本化定理) を満たす値。"
+    },
+    {
+      "id": "l03-02",
+      "lecture": 3,
+      "topic": "標本化周波数",
+      "type": "number",
+      "question": "DVD・BD・デジタル放送で主流の標本化周波数は何 kHz か?",
+      "answerNumber": 48,
+      "unit": "kHz",
+      "explanation": "48kHz。映像系メディアの主流。CD の 44.1kHz とセットで覚える。"
+    },
+    {
+      "id": "l03-03",
+      "lecture": 3,
+      "topic": "標本化周波数",
+      "type": "number",
+      "question": "電話 (音声帯域 300Hz〜3.4kHz) の標本化周波数は何 kHz か?",
+      "answerNumber": 8,
+      "unit": "kHz",
+      "explanation": "電話=8kHz。人の声の帯域 3.4kHz の2倍以上あればよいため。G.711 (64kbps) で使用。"
+    },
+    {
+      "id": "l03-04",
+      "lecture": 3,
+      "topic": "標本化定理",
+      "type": "choice",
+      "question": "CD の標本化周波数が 44.1kHz に設定されている理由はどれか?",
+      "choices": [
+        "可聴域の上限約20kHzの2倍以上で標本化すれば元信号を復元できるから (標本化定理)",
+        "当時の半導体の動作限界だったから",
+        "人の声の周波数の10倍だから",
+        "50Hz と 60Hz の電源周波数の公倍数だから"
+      ],
+      "answerIndex": 0,
+      "explanation": "標本化定理: 最大周波数の2倍以上で標本化すれば元信号を復元できる。可聴域 20kHz × 2 = 40kHz 以上が必要で、余裕を持って 44.1kHz。"
+    },
+    {
+      "id": "l03-05",
+      "lecture": 3,
+      "topic": "標本化定理",
+      "type": "term",
+      "question": "標本化周波数の半分にあたる周波数を何というか? (これを超える成分は偽信号になる)",
+      "answers": [
+        "ナイキスト周波数",
+        "nyquist周波数",
+        "ナイキスト"
+      ],
+      "explanation": "ナイキスト周波数=標本化周波数の1/2。これを超えた成分は折り返し雑音 (エイリアシング) となる。"
+    },
+    {
+      "id": "l03-06",
+      "lecture": 3,
+      "topic": "標本化定理",
+      "type": "term",
+      "question": "ナイキスト周波数を超える成分が折り返して生じる偽信号・雑音を何というか?",
+      "answers": [
+        "エイリアシング",
+        "折り返し雑音",
+        "折り返しノイズ",
+        "aliasing",
+        "エイリアス"
+      ],
+      "explanation": "折り返し雑音 (エイリアシング)。標本化前にローパスフィルタで除去する必要がある。"
+    },
+    {
+      "id": "l03-07",
+      "lecture": 3,
+      "topic": "量子化",
+      "type": "number",
+      "question": "CD の量子化ビット数は何 bit か?",
+      "answerNumber": 16,
+      "unit": "bit",
+      "explanation": "CD=44.1kHz/16bit/2ch。16bit の SNR は約96dB。"
+    },
+    {
+      "id": "l03-08",
+      "lecture": 3,
+      "topic": "量子化",
+      "type": "number",
+      "question": "16bit 量子化の SNR (信号対雑音比) は約何 dB か? (SNR ≈ 6n dB)",
+      "answerNumber": 96,
+      "unit": "dB",
+      "explanation": "SNR ≈ 6dB × ビット数。8bit→48dB、16bit→96dB、24bit→144dB。16bit→96dB は要暗記。"
+    },
+    {
+      "id": "l03-09",
+      "lecture": 3,
+      "topic": "データ量計算",
+      "type": "number",
+      "question": "44.1kHz / 16bit / ステレオ (2ch) の非圧縮 PCM 1秒あたりのデータ量は何 Byte か?",
+      "answerNumber": 176400,
+      "unit": "Byte",
+      "explanation": "データ量 = 標本化周波数 × 量子化ビット × ch数 × 時間 ÷ 8 = 44100 × 16 × 2 × 1 / 8 = 176,400 Byte。計算問題は試験頻出。"
+    },
+    {
+      "id": "l03-10",
+      "lecture": 3,
+      "topic": "サラウンド",
+      "type": "choice",
+      "question": "「5.1ch」の「.1」が表すものはどれか?",
+      "choices": [
+        "LFE (低音効果専用チャンネル)",
+        "センタースピーカ",
+        "予備チャンネル",
+        "ステレオの右チャンネル"
+      ],
+      "answerIndex": 0,
+      "explanation": ".1 = LFE (Low Frequency Effects)。サブウーファで再生する低音専用チャンネル。"
+    },
+    {
+      "id": "l03-11",
+      "lecture": 3,
+      "topic": "PCM",
+      "type": "term",
+      "question": "アナログ音声を標本化+量子化して数列に変換する、CD などで使われる非圧縮の変調方式は? (アルファベット3文字)",
+      "answers": [
+        "PCM",
+        "パルス符号変調",
+        "pulse code modulation"
+      ],
+      "explanation": "PCM (Pulse Code Modulation)。標本化・量子化しただけの非圧縮方式で、圧縮方式の基準となる。"
+    },
+    {
+      "id": "l03-12",
+      "lecture": 3,
+      "topic": "ファイル形式",
+      "type": "choice",
+      "question": "可逆圧縮のオーディオフォーマットはどれか?",
+      "choices": [
+        "FLAC",
+        "MP3",
+        "AAC",
+        "CELP"
+      ],
+      "answerIndex": 0,
+      "explanation": "FLAC=可逆圧縮 (ロスレス配信・ハイレゾ配信で使用)。WAV/AIFF は非圧縮 PCM。MP3/AAC は非可逆 (約1/10)。"
+    },
+    {
+      "id": "l03-13",
+      "lecture": 3,
+      "topic": "ラウドネス",
+      "type": "choice",
+      "question": "ラウドネスの単位 phon の説明として正しいものはどれか?",
+      "choices": [
+        "人の感覚音量の単位で、1kHz の純音では音圧レベルの dB 値と一致する",
+        "物理的な音圧の単位で周波数によらず一定",
+        "PCM の最大値を 0 とするデジタル専用の単位",
+        "スピーカの出力電力の単位"
+      ],
+      "answerIndex": 0,
+      "explanation": "phon は等ラウドネス曲線に基づく感覚量。1kHz 純音では音圧レベル (dBSPL) と一致する。基準音圧は 20µPa。"
+    },
+    {
+      "id": "l04-01",
+      "lecture": 4,
+      "topic": "文字コード",
+      "type": "choice",
+      "question": "文字コードとは何か?",
+      "choices": [
+        "数値と文字を対応付ける共通のテーブル",
+        "文字を画像として保存する形式",
+        "文字を暗号化する方式",
+        "フォントの描画データ"
+      ],
+      "answerIndex": 0,
+      "explanation": "PC 内部で文字は単なる数値。「数値↔文字」の対応表が文字コードで、送受信側で揃える必要がある。"
+    },
+    {
+      "id": "l04-02",
+      "lecture": 4,
+      "topic": "1バイトコード",
+      "type": "choice",
+      "question": "ASCII コードの説明として正しいものはどれか?",
+      "choices": [
+        "7bit (1バイト) で英数字・記号を表す1バイトコード",
+        "2バイトで日本語を表すコード",
+        "1〜4バイトの可変長コード",
+        "16bit 固定長の国際コード"
+      ],
+      "answerIndex": 0,
+      "explanation": "ASCII は 7bit (実質1バイト) の1バイトコード。英数字・記号のみで日本語は表せない。"
+    },
+    {
+      "id": "l04-03",
+      "lecture": 4,
+      "topic": "2バイトコード",
+      "type": "choice",
+      "question": "Shift_JIS の1文字あたりのバイト数はどれか?",
+      "choices": [
+        "1〜2バイト",
+        "常に1バイト",
+        "常に2バイト",
+        "1〜4バイト"
+      ],
+      "answerIndex": 0,
+      "explanation": "Shift_JIS は ASCII 部分が1バイト、日本語が2バイトの可変長。Windows の入出力で長く使われてきた。"
+    },
+    {
+      "id": "l04-04",
+      "lecture": 4,
+      "topic": "Unicode",
+      "type": "choice",
+      "question": "UTF-8 の1文字あたりのバイト数はどれか?",
+      "choices": [
+        "1〜4バイト",
+        "常に1バイト",
+        "常に2バイト",
+        "常に4バイト"
+      ],
+      "answerIndex": 0,
+      "explanation": "UTF-8 は 1〜4バイトの可変長。ASCII 互換 (英数字は1バイト) なのが普及の理由。"
+    },
+    {
+      "id": "l04-05",
+      "lecture": 4,
+      "topic": "Unicode",
+      "type": "term",
+      "question": "世界中の文字を統一的に扱うために制定され、Windows/Mac/Unix の内部コードに採用されている文字コード体系は?",
+      "answers": [
+        "Unicode",
+        "ユニコード"
+      ],
+      "explanation": "Unicode。Unicode Consortium が制定し、UTF-8/UTF-16 などの符号化方式 (実装規約) まで定義している。"
+    },
+    {
+      "id": "l04-06",
+      "lecture": 4,
+      "topic": "混在の問題",
+      "type": "choice",
+      "question": "1バイト文字と2バイト文字が混在したときに起こる問題として正しいものはどれか?",
+      "choices": [
+        "文字数の計算や文字の切り出しを誤り、文字化けが発生する",
+        "ファイルサイズが必ず2倍になる",
+        "通信速度が半分になる",
+        "フォントが表示できなくなるだけで処理に影響はない"
+      ],
+      "answerIndex": 0,
+      "explanation": "バイト数=文字数でなくなるため、文字数計算・部分文字列の切り出しで誤りが起き、2バイト文字の途中で切ると文字化けする。"
+    },
+    {
+      "id": "l04-07",
+      "lecture": 4,
+      "topic": "実在のコード",
+      "type": "choice",
+      "question": "2バイト系 (マルチバイト) の日本語文字コードの組み合わせとして正しいものはどれか?",
+      "choices": [
+        "Shift_JIS・EUC-JP・JIS (ISO-2022-JP)",
+        "ASCII・Latin-1・EBCDIC",
+        "UTF-8・ASCII・Base64",
+        "RGB・CMYK・YUV"
+      ],
+      "answerIndex": 0,
+      "explanation": "日本語の代表的コードは Shift_JIS / EUC-JP / JIS。1バイトコードの代表は ASCII や Latin-1。BML では EUC-JP が使われる。"
+    },
+    {
+      "id": "l04-08",
+      "lecture": 4,
+      "topic": "実在のコード",
+      "type": "choice",
+      "question": "Windows がファイル名や入出力で伝統的に使ってきた日本語文字コードはどれか?",
+      "choices": [
+        "Shift_JIS",
+        "EUC-JP",
+        "UTF-32",
+        "ISO-8859-1"
+      ],
+      "answerIndex": 0,
+      "explanation": "Windows の入出力は Shift_JIS (内部コードは Unicode)。Unix 系は EUC-JP → 現在は UTF-8 が主流。"
+    },
+    {
+      "id": "l05-01",
+      "lecture": 5,
+      "topic": "IF の分類",
+      "type": "choice",
+      "question": "映像インタフェースの組み合わせとして正しいものはどれか?",
+      "choices": [
+        "HDMI・DisplayPort・DVI",
+        "USB・Thunderbolt・Ethernet",
+        "S/PDIF・XLR・RCA (白赤)",
+        "IEEE1394・Lightning・SATA"
+      ],
+      "answerIndex": 0,
+      "explanation": "映像 IF=HDMI/DisplayPort/DVI (アナログでは VGA/S端子/D端子)。汎用 IF=USB/Thunderbolt/LAN。オーディオ IF=S/PDIF/XLR など。"
+    },
+    {
+      "id": "l05-02",
+      "lecture": 5,
+      "topic": "IF の分類",
+      "type": "choice",
+      "question": "汎用インタフェースの組み合わせとして正しいものはどれか?",
+      "choices": [
+        "USB・Thunderbolt・Ethernet (LAN)",
+        "HDMI・DVI・VGA",
+        "TOSLINK・AES/EBU・フォンプラグ",
+        "D端子・S端子・BNC"
+      ],
+      "answerIndex": 0,
+      "explanation": "汎用 IF は特定メディア専用でなく何でも運べる: USB、IEEE1394、Thunderbolt、LAN (Ethernet)。"
+    },
+    {
+      "id": "l05-03",
+      "lecture": 5,
+      "topic": "IF の分類",
+      "type": "choice",
+      "question": "デジタルオーディオインタフェースの組み合わせとして正しいものはどれか?",
+      "choices": [
+        "S/PDIF (光 TOSLINK / 同軸) と AES/EBU",
+        "HDMI と DisplayPort",
+        "VGA と DVI",
+        "RCA (黄) と S端子"
+      ],
+      "answerIndex": 0,
+      "explanation": "S/PDIF=民生用 (光 TOSLINK と RCA 同軸の2形式)、AES/EBU=業務用。データ構造は同じで S/PDIF にはコピー制御が追加されている。"
+    },
+    {
+      "id": "l05-04",
+      "lecture": 5,
+      "topic": "USB",
+      "type": "number",
+      "question": "USB 2.0 の最大転送速度は何 Mbps か?",
+      "answerNumber": 480,
+      "unit": "Mbps",
+      "explanation": "USB1.1=12Mbps、2.0=480Mbps、3.0=5Gbps、3.1=10Gbps、3.2=20Gbps、USB4=最大40Gbps。"
+    },
+    {
+      "id": "l05-05",
+      "lecture": 5,
+      "topic": "USB PD",
+      "type": "number",
+      "question": "USB Power Delivery (PD 3.0) の最大給電電力は何 W か? (20V/5A)",
+      "answerNumber": 100,
+      "unit": "W",
+      "explanation": "USB PD は Type-C で最大 20V×5A=100W。ノート PC の充電まで可能になった。"
+    },
+    {
+      "id": "l05-06",
+      "lecture": 5,
+      "topic": "USB PD",
+      "type": "choice",
+      "question": "USB PD の給電の仕組みとして正しいものはどれか?",
+      "choices": [
+        "供給側が PDO で出せる電圧/電流の組を宣言し、受電側が RDO で必要なものを要求するネゴシエーションを行う",
+        "常に最大電力で給電し、受電側が余剰を捨てる",
+        "ケーブルの抵抗値で自動的に電圧が決まる",
+        "ユーザが手動で電圧を切り替える"
+      ],
+      "answerIndex": 0,
+      "explanation": "USB PD は PDO (Power Data Object) 宣言 → RDO 要求のネゴシエーションで電圧・電流を決める。機器に応じた最適な給電ができるのが特徴。"
+    },
+    {
+      "id": "l05-07",
+      "lecture": 5,
+      "topic": "USB",
+      "type": "number",
+      "question": "USB Type-C コネクタのピン数は? (裏表どちらでも挿せる)",
+      "answerNumber": 24,
+      "unit": "pin",
+      "explanation": "Type-C=24pin で裏表対称。データ転送×充電×給電×映像出力 (Alt Mode) を1つのコネクタに集約する多機能規格。"
+    },
+    {
+      "id": "l05-08",
+      "lecture": 5,
+      "topic": "HDMI",
+      "type": "term",
+      "question": "HDMI で使われる著作権保護のための暗号化技術は? (アルファベット4文字)",
+      "answers": [
+        "HDCP",
+        "high-bandwidth digital content protection"
+      ],
+      "explanation": "HDCP (High-bandwidth Digital Content Protection)。EDID の機器間認証が完了しないとデータが流れない。"
+    },
+    {
+      "id": "l05-09",
+      "lecture": 5,
+      "topic": "HDMI",
+      "type": "choice",
+      "question": "HDMI と DVI の関係として正しいものはどれか?",
+      "choices": [
+        "HDMI は DVI のデジタル部分と電気的互換 (アナログ部なし・音声多重可)",
+        "HDMI は DVI のアナログ部分を継承した規格",
+        "両者に互換性はない",
+        "DVI は HDMI の上位互換規格"
+      ],
+      "answerIndex": 0,
+      "explanation": "HDMI は DVI のデジタル部分と電気互換で、映像ブランキングに音声を多重できる。DVI はデジタル部と VGA 互換アナログ部の両方を持つ。"
+    },
+    {
+      "id": "l05-10",
+      "lecture": 5,
+      "topic": "DisplayPort",
+      "type": "choice",
+      "question": "DisplayPort を策定した標準化団体はどれか?",
+      "choices": [
+        "VESA",
+        "HDMI Forum",
+        "USB-IF",
+        "IETF"
+      ],
+      "answerIndex": 0,
+      "explanation": "DisplayPort は VESA (Video Electronics Standards Association) が VGA/DVI の置き換えを狙って策定。"
+    },
+    {
+      "id": "l05-11",
+      "lecture": 5,
+      "topic": "相互接続性",
+      "type": "choice",
+      "question": "「相互接続性」と「相互運用性」の関係として正しいものはどれか?",
+      "choices": [
+        "物理・電気・データ形式を揃えて接続できるのが相互接続性、その先で実際に機能が動くのが相互運用性",
+        "両者は同じ意味",
+        "相互運用性が確保されれば相互接続性は不要",
+        "相互接続性はソフトウェア、相互運用性はハードウェアの概念"
+      ],
+      "answerIndex": 0,
+      "explanation": "相互接続性 (interconnectivity) = コネクタ形状・電気特性・データ形式の3レイヤを揃えて接続できること。相互運用性 (interoperability) = 実際に呼び出して動くこと。"
+    },
+    {
+      "id": "l05-12",
+      "lecture": 5,
+      "topic": "伝送の一般則",
+      "type": "choice",
+      "question": "インタフェースの速度と伝送距離の一般的な関係はどれか?",
+      "choices": [
+        "高速なインタフェースほど伝送距離が短い",
+        "高速なインタフェースほど伝送距離が長い",
+        "速度と距離に関係はない",
+        "光ケーブルは速度が上がるほど距離も伸びる"
+      ],
+      "answerIndex": 0,
+      "explanation": "一般則: 高速 IF ほど伝送距離が短い。距離を稼ぐには速度を下げる・低損失ケーブルを使う・リンクを分けるなどが必要。"
+    },
+    {
+      "id": "l06-01",
+      "lecture": 6,
+      "topic": "ヘッダ",
+      "type": "choice",
+      "question": "ファイルフォーマットにおける「ヘッダ」の説明として正しいものはどれか?",
+      "choices": [
+        "ファイルの先頭にあり、種類・バージョン・構造などを示す情報",
+        "ファイルの末尾にある誤り訂正符号",
+        "本体データを圧縮したもの",
+        "OS が付けるファイル名のこと"
+      ],
+      "answerIndex": 0,
+      "explanation": "ヘッダはファイル先頭の管理情報。全体をスキャンせずファイルの種類や目的の情報へ直接アクセスできるようにする役割を持つ。"
+    },
+    {
+      "id": "l06-02",
+      "lecture": 6,
+      "topic": "コンテナ",
+      "type": "term",
+      "question": "映像・音声・字幕など複数のストリームを1つのファイルにまとめて格納する形式を何フォーマットというか?",
+      "answers": [
+        "コンテナフォーマット",
+        "コンテナ",
+        "container format",
+        "コンテナ形式"
+      ],
+      "explanation": "コンテナフォーマット (MP4, AVI, MKV など)。中身の符号化方式 (コーデック) とは独立した「入れ物」の規格。"
+    },
+    {
+      "id": "l06-03",
+      "lecture": 6,
+      "topic": "コンテナ",
+      "type": "choice",
+      "question": "「H.264」と「MP4」の関係として正しいものはどれか?",
+      "choices": [
+        "H.264 は映像の符号化方式、MP4 はそれを格納するコンテナフォーマット",
+        "両方ともコンテナフォーマット",
+        "両方とも符号化方式",
+        "MP4 は H.264 の旧名称"
+      ],
+      "answerIndex": 0,
+      "explanation": "コーデック (符号化方式) とコンテナ (入れ物) は別レイヤ。MP4 コンテナには H.264 映像 + AAC 音声などを格納する。"
+    },
+    {
+      "id": "l06-04",
+      "lecture": 6,
+      "topic": "ファイル構造",
+      "type": "choice",
+      "question": "ファイルの中身の一般的な構成として正しいものはどれか?",
+      "choices": [
+        "ヘッダ (種類・バージョン) + メタデータ (追加情報) + 本体データ",
+        "本体データのみ",
+        "暗号鍵 + 本体データ",
+        "インデックス + フッタのみ"
+      ],
+      "answerIndex": 0,
+      "explanation": "ヘッダ+メタデータ+本体データが基本構成。PNG なら 8byte シグネチャ + IHDR + IDAT + IEND のチャンク構成。"
+    },
+    {
+      "id": "l06-05",
+      "lecture": 6,
+      "topic": "ストリーミング",
+      "type": "choice",
+      "question": "ストリーミング向けフォーマットの特徴として正しいものはどれか?",
+      "choices": [
+        "データをブロック分割し、ブロック単位で再生でき、インデックスで指定位置にジャンプできる",
+        "ファイル全体をダウンロードしてからでないと再生できない",
+        "圧縮を一切行わない",
+        "必ず暗号化されている"
+      ],
+      "answerIndex": 0,
+      "explanation": "ブロック分割 + ブロック単位再生 + インデックスジャンプにより、ダウンロード完了を待たずに再生できる (HLS の playlist などが現代の例)。"
+    },
+    {
+      "id": "l06-06",
+      "lecture": 6,
+      "topic": "ファイル識別",
+      "type": "choice",
+      "question": "PNG ファイルの先頭 8 バイトのシグネチャ (89 50 4E 47 …) の役割はどれか?",
+      "choices": [
+        "ファイルが PNG であることを識別させる magic number",
+        "画像の縦横サイズを表す",
+        "圧縮率を表す",
+        "著作権情報を格納する"
+      ],
+      "answerIndex": 0,
+      "explanation": "先頭バイト列はファイル種別を示す magic number。0x89 はバイナリファイルの印、続く 50 4E 47 は \"PNG\"。"
+    },
+    {
+      "id": "l07-01",
+      "lecture": 7,
+      "topic": "符号化プロセス",
+      "type": "choice",
+      "question": "映像の圧縮符号化プロセスの正しい順序はどれか?",
+      "choices": [
+        "時間方向の処理 (動き補償) → 空間方向の処理 (DCT) → 量子化 → 符号割当",
+        "量子化 → DCT → 動き補償 → 符号割当",
+        "符号割当 → 量子化 → DCT → 動き補償",
+        "空間方向の処理 → 量子化 → 時間方向の処理 → 符号割当"
+      ],
+      "answerIndex": 0,
+      "explanation": "時間処理 (フレーム間予測・動き補償) → 空間処理 (DCT) → 量子化 → 符号割当 (エントロピー符号化) の4段階。音響符号化はここから空間処理を除いた形。"
+    },
+    {
+      "id": "l07-02",
+      "lecture": 7,
+      "topic": "動き補償",
+      "type": "term",
+      "question": "前フレームの領域を動きベクトル分ずらして予測フレームを作り、差分だけを符号化してデータ量を削減する技術は?",
+      "answers": [
+        "動き補償",
+        "動き補償予測",
+        "motion compensation",
+        "MC",
+        "動きベクトル予測"
+      ],
+      "explanation": "動き補償 (MC)。時間方向の冗長性を除去する。差分だけ送ればよいので圧縮率が大きく向上する。"
+    },
+    {
+      "id": "l07-03",
+      "lecture": 7,
+      "topic": "DCT",
+      "type": "choice",
+      "question": "DCT (離散コサイン変換) の説明として正しいものはどれか?",
+      "choices": [
+        "画像を空間領域から周波数領域へ変換する直交変換",
+        "画像を暗号化する変換",
+        "フレーム間の差分を計算する処理",
+        "色空間を RGB から CMYK に変換する処理"
+      ],
+      "answerIndex": 0,
+      "explanation": "DCT は空間→周波数領域への直交変換。隣接画素の相関 (差が小さいこと) を利用してエネルギーを低周波に集中させる。"
+    },
+    {
+      "id": "l07-04",
+      "lecture": 7,
+      "topic": "視覚特性",
+      "type": "choice",
+      "question": "映像符号化でデータ量削減に利用されている人の視覚特性はどれか?",
+      "choices": [
+        "細かい模様など高周波成分の変化には気づきにくい",
+        "低周波成分の変化には気づきにくい",
+        "色の変化に最も敏感で輝度には鈍感",
+        "静止画より動画の劣化に敏感"
+      ],
+      "answerIndex": 0,
+      "explanation": "人の目は高周波成分 (細かい模様・急激な変化) に鈍感なので、高周波を粗く量子化・削減しても画質劣化に気づきにくい。"
+    },
+    {
+      "id": "l07-05",
+      "lecture": 7,
+      "topic": "DCT",
+      "type": "number",
+      "question": "JPEG や MPEG で DCT を適用するブロックのサイズは何×何画素か? (数字1つで回答)",
+      "answerNumber": 8,
+      "unit": "×8 画素",
+      "explanation": "8×8 画素ブロックに分割して2次元 DCT を適用する。H.264 では 4×4 整数変換も使われる。"
+    },
+    {
+      "id": "l07-06",
+      "lecture": 7,
+      "topic": "規格",
+      "type": "choice",
+      "question": "デジタル放送や DVD で使われる映像符号化規格はどれか?",
+      "choices": [
+        "MPEG-2 (H.262)",
+        "H.261",
+        "HEVC (H.265)",
+        "MPEG-7"
+      ],
+      "answerIndex": 0,
+      "explanation": "H.261 (1990, 原点) → MPEG-2/H.262 (デジタル放送・DVD) → MPEG-4 AVC/H.264 (BD・ネット配信) → HEVC/H.265 (4K/8K)。"
+    },
+    {
+      "id": "l07-07",
+      "lecture": 7,
+      "topic": "規格",
+      "type": "choice",
+      "question": "H.264 の別名はどれか?",
+      "choices": [
+        "MPEG-4 AVC",
+        "MPEG-2 Video",
+        "HEVC",
+        "JPEG2000"
+      ],
+      "answerIndex": 0,
+      "explanation": "H.264 = MPEG-4 AVC (ISO/IEC 14496-10)。BD、ワンセグ、ネット動画配信の多くで使われる。"
+    },
+    {
+      "id": "l07-08",
+      "lecture": 7,
+      "topic": "規格",
+      "type": "term",
+      "question": "H.265 の別名は? (4K/8K 向けの高効率映像符号化規格、アルファベット4文字)",
+      "answers": [
+        "HEVC",
+        "high efficiency video coding"
+      ],
+      "explanation": "H.265 = HEVC (High Efficiency Video Coding)。H.264 の約2倍の圧縮効率。"
+    },
+    {
+      "id": "l07-09",
+      "lecture": 7,
+      "topic": "量子化",
+      "type": "choice",
+      "question": "DCT 後の量子化で行われる処理として正しいものはどれか?",
+      "choices": [
+        "視覚が鈍感な高周波成分を粗く量子化してデータ量を削る",
+        "全周波数成分を同じ精度で量子化する",
+        "低周波成分だけを削除する",
+        "量子化は可逆なので画質は劣化しない"
+      ],
+      "answerIndex": 0,
+      "explanation": "高周波ほど粗い量子化テーブルを使い、視覚上気づきにくい部分から情報を削る。ここが非可逆圧縮の中心。"
+    },
+    {
+      "id": "l07-10",
+      "lecture": 7,
+      "topic": "符号割当",
+      "type": "choice",
+      "question": "量子化後の係数をジグザグスキャンする目的はどれか?",
+      "choices": [
+        "低周波から順に一列に並べ、ゼロの連続を作って符号化効率を上げるため",
+        "画像を回転させるため",
+        "暗号化のため",
+        "色情報を分離するため"
+      ],
+      "answerIndex": 0,
+      "explanation": "ジグザグスキャンで低周波→高周波の順に並べると、量子化でゼロになった高周波係数が連続し、ランレングス+ハフマン符号化が効く。"
+    },
+    {
+      "id": "l08-01",
+      "lecture": 8,
+      "topic": "聴覚特性",
+      "type": "term",
+      "question": "大きな音の近くの周波数にある小さな音が聞こえなくなる聴覚の現象を何というか? (MPEG 音響符号化で利用)",
+      "answers": [
+        "マスキング効果",
+        "マスキング",
+        "masking",
+        "周波数マスキング"
+      ],
+      "explanation": "マスキング効果。大きな音に近い周波数の小さな音は符号化しなくても人には劣化がわからない。MPEG 音響圧縮の中心原理。"
+    },
+    {
+      "id": "l08-02",
+      "lecture": 8,
+      "topic": "聴覚特性",
+      "type": "term",
+      "question": "異なる周波数の純音が「同じ大きさに聞こえる」音圧を結んだ曲線を何というか? (ISO226)",
+      "answers": [
+        "等ラウドネス曲線",
+        "equal loudness contour",
+        "等ラウドネスきょくせん"
+      ],
+      "explanation": "等ラウドネス曲線。人の耳は周波数によって感度が違う (低音・高音に鈍い)。最下限の MAF 以下の音は聞こえないので符号化しない。"
+    },
+    {
+      "id": "l08-03",
+      "lecture": 8,
+      "topic": "聴覚特性",
+      "type": "choice",
+      "question": "MPEG 音響符号化で利用されている聴覚特性の組み合わせとして正しいものはどれか?",
+      "choices": [
+        "最小可聴限 (MAF) 以下は符号化しない・マスキングされた音は符号化しない・周波数ごとの感度差に合わせ量子化を配分",
+        "人は高音ほどよく聞こえるので高音だけ残す",
+        "左右の耳は完全に独立なので2倍のデータが必要",
+        "音の大きさは周波数によらず一定に聞こえる"
+      ],
+      "answerIndex": 0,
+      "explanation": "(1) MAF 以下の小さい音は符号化しない (2) マスキング効果で聞こえない音は符号化しない (3) 等ラウドネス曲線に基づき量子化ビットを配分。"
+    },
+    {
+      "id": "l08-04",
+      "lecture": 8,
+      "topic": "MDCT",
+      "type": "choice",
+      "question": "MDCT が DCT と異なる点はどれか?",
+      "choices": [
+        "信号を 50% オーバーラップさせて切り出して変換し、ブロック境界の不連続 (音歪み) を除去する",
+        "コサインでなくサインだけを使う",
+        "可逆圧縮になる",
+        "時間領域のまま処理する"
+      ],
+      "answerIndex": 0,
+      "explanation": "MDCT (修正離散コサイン変換) は変換自体は DCT で、50% オーバーラップして切り出す点が「修正」。映像は 8×8 ブロックを独立に変換するが、音では境界の不連続が歪みとして聞こえるため。"
+    },
+    {
+      "id": "l08-05",
+      "lecture": 8,
+      "topic": "MDCT",
+      "type": "number",
+      "question": "MDCT では信号を何 % オーバーラップさせて切り出すか?",
+      "answerNumber": 50,
+      "unit": "%",
+      "explanation": "50% オーバーラップ。隣接ブロックと半分ずつ重ねることで境界の非連続性を除去する。"
+    },
+    {
+      "id": "l08-06",
+      "lecture": 8,
+      "topic": "AAC",
+      "type": "choice",
+      "question": "MPEG-2 AAC の特徴として正しいものはどれか?",
+      "choices": [
+        "MPEG-1 との後方互換性を捨て、BC の半分の符号化レートで同等音質を実現した",
+        "MPEG-1 と完全な後方互換性を持つ",
+        "可逆圧縮方式である",
+        "人の声専用の符号化方式である"
+      ],
+      "answerIndex": 0,
+      "explanation": "AAC は NBC (後方非互換)。互換性を捨てた分高効率で、AAC 128kbps = BC 256kbps 相当。音楽配信や日本のデジタル放送の標準。"
+    },
+    {
+      "id": "l08-07",
+      "lecture": 8,
+      "topic": "規格",
+      "type": "choice",
+      "question": "MP3 の正式な規格名はどれか?",
+      "choices": [
+        "MPEG-1 Layer III",
+        "MPEG-3",
+        "MPEG-2 AAC",
+        "MPEG-4 ALS"
+      ],
+      "answerIndex": 0,
+      "explanation": "MP3 = MPEG-1 Audio Layer III。32分割サブバンド + MDCT で聴覚特性を利用する非可逆圧縮。"
+    },
+    {
+      "id": "l08-08",
+      "lecture": 8,
+      "topic": "音声符号化",
+      "type": "choice",
+      "question": "CELP (符号励振線形予測) はどんな音の符号化向けの方式か?",
+      "choices": [
+        "人の声 (音声)。発声メカニズムをモデル化し IP 電話などで使用",
+        "楽器・楽曲 (音響)",
+        "環境音・効果音",
+        "超音波"
+      ],
+      "answerIndex": 0,
+      "explanation": "CELP は人の発声メカニズム (声道) をモデル化した音声特化方式。波形でなく符号帳のインデックス+パラメータを送る。楽曲には AAC などの音響符号化を使う。"
+    },
+    {
+      "id": "l08-09",
+      "lecture": 8,
+      "topic": "符号化の分類",
+      "type": "choice",
+      "question": "周波数領域の音響符号化 (変換・サブバンド符号化) の圧縮率はどの程度か?",
+      "choices": [
+        "約1/10 まで圧縮しても聴感上ほぼ原音 (非可逆)",
+        "せいぜい1/2程度",
+        "1/1000 まで可逆圧縮できる",
+        "圧縮はできない"
+      ],
+      "answerIndex": 0,
+      "explanation": "周波数領域符号化は聴覚特性を利用して約1/10 の高圧縮 (非可逆)。時間領域の予測符号化はせいぜい数分の1。"
+    },
+    {
+      "id": "l08-10",
+      "lecture": 8,
+      "topic": "AAC",
+      "type": "term",
+      "question": "アタック音の直前に量子化雑音が漏れて聞こえる現象を何というか? (ショートブロック切替で対策する)",
+      "answers": [
+        "プリエコー",
+        "pre-echo",
+        "プリエコー現象"
+      ],
+      "explanation": "プリエコー。ロングブロック (2048サンプル) のままだと発生するため、聴覚モデルがショートブロック (256サンプル) に切り替えて対策する。"
+    },
+    {
+      "id": "l09-01",
+      "lecture": 9,
+      "topic": "MPEG-2 TS",
+      "type": "number",
+      "question": "MPEG-2 TS パケットの長さは何 byte (固定長) か?",
+      "answerNumber": 188,
+      "unit": "byte",
+      "explanation": "TS パケット = 188byte 固定長 (ヘッダ 4byte + データ 184byte)。"
+    },
+    {
+      "id": "l09-02",
+      "lecture": 9,
+      "topic": "MPEG-2 TS",
+      "type": "choice",
+      "question": "TS パケットが固定長である理由はどれか?",
+      "choices": [
+        "誤りが発生する伝送路 (電波) で同期・誤り訂正をしやすくするため",
+        "メモリを節約するため",
+        "暗号化を簡単にするため",
+        "可変長にする技術がなかったため"
+      ],
+      "answerIndex": 0,
+      "explanation": "TS=固定長で誤りが発生する伝送路向け (放送)。PS=可変長で誤りのない蓄積媒体向け (DVD, CD-ROM)。"
+    },
+    {
+      "id": "l09-03",
+      "lecture": 9,
+      "topic": "MPEG-2 TS",
+      "type": "choice",
+      "question": "TS (Transport Stream) と PS (Program Stream) の使い分けとして正しいものはどれか?",
+      "choices": [
+        "TS は放送など誤りのある伝送路向け、PS は DVD など誤りのない蓄積媒体向け",
+        "TS は蓄積媒体向け、PS は放送向け",
+        "両者は完全に同じもの",
+        "PS は音声専用、TS は映像専用"
+      ],
+      "answerIndex": 0,
+      "explanation": "TS=固定長 188byte・伝送路向け。PS=可変長・蓄積媒体向け。頻出の対比。"
+    },
+    {
+      "id": "l09-04",
+      "lecture": 9,
+      "topic": "ストリーム階層",
+      "type": "choice",
+      "question": "デジタル放送のストリームの階層として正しい順序はどれか?",
+      "choices": [
+        "ES (映像・音声そのもの) → PES (パケット化) → TS (多重化)",
+        "TS → PES → ES",
+        "PES → ES → TS",
+        "ES → TS → PES"
+      ],
+      "answerIndex": 0,
+      "explanation": "ES (Elementary Stream) を PES にパケット化し、番組情報 (PSI/SI) の Section と共に 188byte の TS パケットへ多重化する。"
+    },
+    {
+      "id": "l09-05",
+      "lecture": 9,
+      "topic": "データ放送",
+      "type": "term",
+      "question": "データ放送 (d ボタン) の画面を記述する、HTML に似た放送用マークアップ言語は? (アルファベット3文字)",
+      "answers": [
+        "BML",
+        "broadcast markup language"
+      ],
+      "explanation": "BML (Broadcast Markup Language)。ARIB STD-B24 で規定。文字コードは EUC-JP。"
+    },
+    {
+      "id": "l09-06",
+      "lecture": 9,
+      "topic": "PSI/SI",
+      "type": "choice",
+      "question": "番組名・放送日時・概要など「番組表の中身」を運ぶテーブルはどれか?",
+      "choices": [
+        "EIT",
+        "PAT",
+        "PMT",
+        "TOT"
+      ],
+      "answerIndex": 0,
+      "explanation": "EIT (Event Information Table) が番組情報。PAT=PMT/NIT への入口 (PID 0x0000)、PMT=1チャンネルの構成、TOT=時刻情報。"
+    },
+    {
+      "id": "l09-07",
+      "lecture": 9,
+      "topic": "立体テレビ",
+      "type": "choice",
+      "question": "2眼式立体テレビが利用している立体視の機構はどれか?",
+      "choices": [
+        "両眼視差のみ",
+        "両眼視差と焦点調節の両方",
+        "運動視差のみ",
+        "輻輳のみ"
+      ],
+      "answerIndex": 0,
+      "explanation": "2眼式 (Stereoscopic 3D) が使うのは両眼視差のみ。輻輳と焦点調節が矛盾する (輻輳は物体位置、ピントはスクリーン面) ため視覚疲労が起こる。"
+    },
+    {
+      "id": "l09-08",
+      "lecture": 9,
+      "topic": "立体テレビ",
+      "type": "choice",
+      "question": "2眼式立体テレビが汎用的にならなかった理由として正しい組み合わせはどれか?",
+      "choices": [
+        "メガネが煩わしい・コンテンツが少ない・視覚疲労 (輻輳と焦点調節の矛盾) が起こる",
+        "画質が SD 相当まで落ちるため",
+        "法律で禁止されたため",
+        "電力消費が10倍になるため"
+      ],
+      "answerIndex": 0,
+      "explanation": "メガネの煩わしさ・コンテンツ不足・視覚疲労で普及せず。業界の関心は 4K/8K へ移った (高精細大画面でも立体感が得られるため)。"
+    },
+    {
+      "id": "l09-09",
+      "lecture": 9,
+      "topic": "立体テレビ",
+      "type": "term",
+      "question": "シャッターメガネ方式 (時分割) で、反対側の眼の映像が混ざって見えてしまう問題を何というか?",
+      "answers": [
+        "クロストーク",
+        "crosstalk"
+      ],
+      "explanation": "クロストーク。時分割のシャッターメガネ方式の問題。空間分割の偏光メガネ方式、メガネなしのパララックスバリア/レンチキュラー方式もある。"
+    },
+    {
+      "id": "l09-10",
+      "lecture": 9,
+      "topic": "放送方式",
+      "type": "choice",
+      "question": "日本の地上デジタル放送の放送方式はどれか?",
+      "choices": [
+        "ISDB-T",
+        "ISDB-S",
+        "DVB-T",
+        "ATSC"
+      ],
+      "answerIndex": 0,
+      "explanation": "地上=ISDB-T、BS/CS=ISDB-S。映像は MPEG-2/H.264、音声は AAC、多重化は MPEG-2 Systems (TS)。"
+    },
+    {
+      "id": "l10-01",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "term",
+      "question": "相手ホストへ ICMP パケットを送り、通信可否や応答時間 (RTT) を確認するコマンドは?",
+      "answers": [
+        "ping"
+      ],
+      "explanation": "ping。ネットワークの疎通確認の基本コマンド。"
+    },
+    {
+      "id": "l10-02",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "term",
+      "question": "宛先までパケットが経由するルータ (経路) を順に調べるコマンドは? (Unix 系での名称)",
+      "answers": [
+        "traceroute",
+        "tracert"
+      ],
+      "explanation": "Unix 系=traceroute、Windows=tracert。どの経路で遅延・到達不能が起きているかを特定できる。"
+    },
+    {
+      "id": "l10-03",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "term",
+      "question": "ドメイン名と IP アドレスの対応を DNS サーバに問い合わせるコマンドは?",
+      "answers": [
+        "nslookup"
+      ],
+      "explanation": "nslookup。名前解決が正しく行われるかを確認する。"
+    },
+    {
+      "id": "l10-04",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "term",
+      "question": "同一ネットワーク内の IP アドレスと MAC アドレスの対応表を調べるコマンドは?",
+      "answers": [
+        "arp"
+      ],
+      "explanation": "arp。L3 (IP) → L2 (MAC) のアドレス解決状況 (ARP テーブル) を確認する。"
+    },
+    {
+      "id": "l10-05",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "term",
+      "question": "自機の通信状況 (確立中のコネクション・待ち受けポート・ルーティングテーブル) を調べるコマンドは?",
+      "answers": [
+        "netstat"
+      ],
+      "explanation": "netstat。どのポートで何が通信しているかを把握できる。"
+    },
+    {
+      "id": "l10-06",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "choice",
+      "question": "Windows で自機の IP アドレスなどネットワーク設定を表示するコマンドはどれか?",
+      "choices": [
+        "ipconfig",
+        "ifconfig",
+        "ping",
+        "nslookup"
+      ],
+      "answerIndex": 0,
+      "explanation": "Windows=ipconfig、Unix 系=ifconfig (または ip)。OS による名前の違いに注意。"
+    },
+    {
+      "id": "l10-07",
+      "lecture": 10,
+      "topic": "アドレス",
+      "type": "choice",
+      "question": "IP アドレスと MAC アドレスの違いとして正しいものはどれか?",
+      "choices": [
+        "IP は L3 の論理アドレスで再割り当て可能、MAC は L2 の物理アドレスで NIC に焼き付けられ原則不変",
+        "IP は物理アドレス、MAC は論理アドレス",
+        "両者は同じものの別名",
+        "MAC アドレスはインターネット全体でのルーティングに使われる"
+      ],
+      "answerIndex": 0,
+      "explanation": "IP=L3・論理・再割当可。MAC=L2・物理・原則不変で隣接機器間の通信に使う。ARP が両者を対応付ける。"
+    },
+    {
+      "id": "l10-08",
+      "lecture": 10,
+      "topic": "DNS",
+      "type": "term",
+      "question": "ドメイン名と IP アドレスを相互に変換する仕組みは? (アルファベット3文字)",
+      "answers": [
+        "DNS",
+        "domain name system",
+        "ドメインネームシステム"
+      ],
+      "explanation": "DNS (Domain Name System)。人間が扱いやすいドメイン名と数値の IP アドレスを対応付ける。"
+    },
+    {
+      "id": "l11-01",
+      "lecture": 11,
+      "topic": "モバイルアプリ",
+      "type": "choice",
+      "question": "ネイティブアプリの説明として正しいものはどれか?",
+      "choices": [
+        "OS ごとに専用言語 (Swift, Kotlin など) で開発するアプリ",
+        "ブラウザ上でのみ動くアプリ",
+        "1つのコードで複数 OS に対応するアプリ",
+        "OS に最初から入っているアプリのこと"
+      ],
+      "answerIndex": 0,
+      "explanation": "ネイティブアプリ=OS ごとに専用言語で開発。性能と OS 固有機能への追従に優れるが、OS ごとに開発が必要。"
+    },
+    {
+      "id": "l11-02",
+      "lecture": 11,
+      "topic": "モバイルアプリ",
+      "type": "choice",
+      "question": "クロスプラットフォーム (マルチプラットフォーム) 開発の代表的なフレームワークの組み合わせはどれか?",
+      "choices": [
+        "Flutter・React Native",
+        "Swift・Kotlin",
+        "jQuery・Backbone.js",
+        "Unity・Unreal Engine"
+      ],
+      "answerIndex": 0,
+      "explanation": "Flutter (2015, Google)・React Native (2015, Meta)・Xamarin (2016〜MS) などが代表。1つのコードで複数 OS 向けに開発できる。"
+    },
+    {
+      "id": "l11-03",
+      "lecture": 11,
+      "topic": "モバイルアプリ",
+      "type": "choice",
+      "question": "クロスプラットフォーム開発のメリットと限界の説明として正しいものはどれか?",
+      "choices": [
+        "1つのコードで複数 OS に対応でき開発効率が高いが、性能や OS 固有機能 (新 UI など) への追従で不利になることがある",
+        "あらゆる面でネイティブより優れている",
+        "性能は高いが開発効率が悪い",
+        "OS 固有機能には即座に対応できるが開発コストが高い"
+      ],
+      "answerIndex": 0,
+      "explanation": "開発効率に優れる一方、性能・OS 固有機能への追従で不利な場合がある。近年は UI をネイティブ、ロジックのみ共通化 (Kotlin Multiplatform) する手法も注目。"
+    },
+    {
+      "id": "l11-04",
+      "lecture": 11,
+      "topic": "UXデザイン",
+      "type": "choice",
+      "question": "UX デザインの開発プロセスとして正しい順序はどれか?",
+      "choices": [
+        "ユーザー調査 → 課題分析 → アイデア・設計 → 試作 (プロトタイプ) → 評価 → 改善",
+        "試作 → 調査 → 評価 → 設計 → 改善 → 分析",
+        "評価 → 改善 → 調査 → 設計 → 試作 → 分析",
+        "設計 → 試作 → リリース → 調査 → 分析 → 廃棄"
+      ],
+      "answerIndex": 0,
+      "explanation": "調査 → 課題分析 → アイデア → 試作 → 評価 → 改善のサイクルを繰り返す。順序を問う問題は先生が予告済み。"
+    },
+    {
+      "id": "l11-05",
+      "lecture": 11,
+      "topic": "UXデザイン",
+      "type": "choice",
+      "question": "UX (User Experience) デザインの説明として正しいものはどれか?",
+      "choices": [
+        "画面の見やすさだけでなく、目的達成までの流れ・使いやすさ・満足感まで含めた体験全体を設計すること",
+        "画面の配色だけを設計すること",
+        "サーバの応答速度を最適化すること",
+        "ユーザ登録画面を作ること"
+      ],
+      "answerIndex": 0,
+      "explanation": "UX=ユーザー体験。見た目 (UI) だけでなく、体験全体 (流れ・使いやすさ・分かりやすさ・満足感) を設計対象とする。"
+    },
+    {
+      "id": "l11-06",
+      "lecture": 11,
+      "topic": "UXデザイン",
+      "type": "term",
+      "question": "UX デザインの手法で、ターゲットユーザを代表する架空の人物像を何というか?",
+      "answers": [
+        "ペルソナ",
+        "persona"
+      ],
+      "explanation": "ペルソナ。①ペルソナ → ②カスタマージャーニー → ③ストーリーボード → ④ワイヤーフレーム → ⑤ユーザビリティテストという手法群で進める。"
+    },
+    {
+      "id": "l11-07",
+      "lecture": 11,
+      "topic": "APIエコノミー",
+      "type": "choice",
+      "question": "API エコノミーの説明として正しいものはどれか?",
+      "choices": [
+        "API を通じて機能やデータを外部提供し、サービス連携によって新たな価値や市場を生み出す仕組み",
+        "API の利用料金を計算する会計手法",
+        "API を秘密にして競争優位を保つ戦略",
+        "社内システムだけで API を使う開発手法"
+      ],
+      "answerIndex": 0,
+      "explanation": "API 公開・利用によって新しい価値を生むビジネスの仕組み。提供側=利用機会の拡大・認知向上、利用側=開発期間/コスト削減。"
+    },
+    {
+      "id": "l11-08",
+      "lecture": 11,
+      "topic": "APIエコノミー",
+      "type": "choice",
+      "question": "API を「利用する側」のメリットとして正しいものはどれか?",
+      "choices": [
+        "決済や地図など専門性の高い機能を一から開発せずに済み、開発期間とコストを削減できる",
+        "自社データの利用機会が拡大する",
+        "API の仕様を自由に変更できる",
+        "サーバ費用が無料になる"
+      ],
+      "answerIndex": 0,
+      "explanation": "利用側=専門機能の開発不要・期間/コスト削減・複数サービスの組み合わせで良い顧客体験。提供側=利用機会拡大・認知向上が対になるメリット。"
+    },
+    {
+      "id": "l11-09",
+      "lecture": 11,
+      "topic": "フレームワーク",
+      "type": "choice",
+      "question": "フロントエンド開発でフレームワーク (React など) が使われるようになった主な理由はどれか?",
+      "choices": [
+        "状態管理と、状態に応じた UI の再描画を効率的に行うため",
+        "通信速度を上げるため",
+        "サーバ代を節約するため",
+        "HTML を不要にするため"
+      ],
+      "answerIndex": 0,
+      "explanation": "状態変化時の再描画や画面とデータの同期をフレームワークが管理することで、開発者は UI 構造と状態の定義に集中でき、開発効率・保守性が上がる。"
+    },
+    {
+      "id": "l12-01",
+      "lecture": 12,
+      "topic": "メタデータ",
+      "type": "choice",
+      "question": "メタデータの説明として正しいものはどれか?",
+      "choices": [
+        "データを説明するためのデータ (data for data)。コンテンツ本体でなく説明情報を検索対象にする",
+        "暗号化されたデータのこと",
+        "圧縮後のデータのこと",
+        "削除済みデータの残骸のこと"
+      ],
+      "answerIndex": 0,
+      "explanation": "メタデータ=data for data。本体 (エッセンス) よりデータ量が格段に少ないため高速検索でき、画像・映像検索をテキスト検索に置き換えられる。"
+    },
+    {
+      "id": "l12-02",
+      "lecture": 12,
+      "topic": "MPEG-7",
+      "type": "term",
+      "question": "マルチメディアコンテンツの内容を記述するメタデータの国際規格 (ISO/IEC 15938) は? (MPEG-◯ の形で回答)",
+      "answers": [
+        "MPEG-7",
+        "MPEG7",
+        "mpeg-7"
+      ],
+      "explanation": "MPEG-7 = Multimedia Content Description Interface。MPEG-1/2/4 が圧縮符号化の規格なのに対し、MPEG-7 は「記述 (メタデータ)」の規格。"
+    },
+    {
+      "id": "l12-03",
+      "lecture": 12,
+      "topic": "MPEG-7",
+      "type": "choice",
+      "question": "MPEG-7 と MPEG-1/2/4 の違いとして正しいものはどれか?",
+      "choices": [
+        "MPEG-1/2/4 は圧縮符号化の規格、MPEG-7 はコンテンツ内容を記述するメタデータの規格",
+        "MPEG-7 は MPEG-4 の高圧縮版",
+        "MPEG-7 は音声専用の圧縮規格",
+        "違いはなくバージョン番号だけが異なる"
+      ],
+      "answerIndex": 0,
+      "explanation": "MPEG-7 は圧縮ではなく記述の規格。記述子 (D)・記述スキーム (DS)・データ型・記述定義言語 (DDL) を標準化している。"
+    },
+    {
+      "id": "l12-04",
+      "lecture": 12,
+      "topic": "MPEG-7",
+      "type": "choice",
+      "question": "MPEG-7 の記述子 (D) と記述スキーム (DS) の関係として正しいものはどれか?",
+      "choices": [
+        "D は単一の特徴の表記方法を規定する基本ツール、DS は複数の記述ツール間の構造・関係の枠組み",
+        "D は動画用、DS は静止画用",
+        "DS は D の圧縮版",
+        "両者は同じもの"
+      ],
+      "answerIndex": 0,
+      "explanation": "Descriptor (D)=単一特徴の表記と意味。Description Scheme (DS)=複数ツール間の構造・意味的関係。DDL (XML Schema ベース) で表記法を定義。"
+    },
+    {
+      "id": "l12-05",
+      "lecture": 12,
+      "topic": "類似画像検索",
+      "type": "choice",
+      "question": "類似画像検索を高速に行うための工夫として正しいものはどれか?",
+      "choices": [
+        "画像本体でなく特徴量だけを比較し、さらに特徴量を事前に抽出してデータベース化しておく",
+        "全画像をピクセル単位で毎回比較する",
+        "画像を毎回手動でタグ付けする",
+        "検索のたびに全画像から特徴量を抽出し直す"
+      ],
+      "answerIndex": 0,
+      "explanation": "(1) 画像本体は比較せず特徴量 (色・輪郭・テクスチャ等) だけ比較 (2) 特徴量は検索時でなく事前に DB 化。先生が予告した頻出ポイント。"
+    },
+    {
+      "id": "l12-06",
+      "lecture": 12,
+      "topic": "画像検索",
+      "type": "choice",
+      "question": "「テキストからの画像検索」が成り立つ推定はどれか?",
+      "choices": [
+        "画像の周辺にあるテキストはその画像を説明しているはず、という推定",
+        "AI が画像の意味を完全に理解している",
+        "全ての画像に人手でタグが付いている",
+        "ファイル名が必ず内容を表している"
+      ],
+      "answerIndex": 0,
+      "explanation": "周辺テキスト=説明文とみなしてテキスト検索に帰着させる。もう1つの方式が特徴量比較による類似画像検索。"
+    },
+    {
+      "id": "l12-07",
+      "lecture": 12,
+      "topic": "メタデータ規格",
+      "type": "term",
+      "question": "1995年に着手された、汎用15要素だけの最古・最シンプルなメタデータ規格は? (ISO 15836)",
+      "answers": [
+        "Dublin Core",
+        "ダブリンコア",
+        "dublincore"
+      ],
+      "explanation": "Dublin Core。Title, Creator, Subject など15要素のみ。国立国会図書館のメタデータも準拠。名前は策定会議の地名 (米オハイオ州 Dublin) 由来。"
+    },
+    {
+      "id": "l12-08",
+      "lecture": 12,
+      "topic": "メタデータ規格",
+      "type": "choice",
+      "question": "実在するメタデータ規格の組み合わせとして正しいものはどれか?",
+      "choices": [
+        "Dublin Core・MPEG-7・SMPTE Metadata・TV-Anytime",
+        "HDMI・DisplayPort・USB・Thunderbolt",
+        "H.264・HEVC・AAC・FLAC",
+        "TCP・UDP・IP・ICMP"
+      ],
+      "answerIndex": 0,
+      "explanation": "代表的メタデータ規格: Dublin Core / MPEG-7 / SMPTE Metadata / P/Meta (EBU) / LOM (教育) / TV-Anytime (+近年の C2PA)。"
+    },
+    {
+      "id": "l12-09",
+      "lecture": 12,
+      "topic": "意味と検索",
+      "type": "term",
+      "question": "自動付与できるメタデータ (色・波形などの物理レベル) と、本当に必要なメタデータ (意味レベル) の間の大きな隔たりを何というか?",
+      "answers": [
+        "セマンティックギャップ",
+        "semantic gap"
+      ],
+      "explanation": "セマンティックギャップ。埋める手段としてフォークソノミー・クラウドソーシング (ヒューマンコンピュテーション) やマルチモーダル処理がある。"
+    },
+    {
+      "id": "l12-10",
+      "lecture": 12,
+      "topic": "検索技術",
+      "type": "choice",
+      "question": "Google の PageRank の基本原理として正しいものはどれか?",
+      "choices": [
+        "多くリンクされるページ、およびランクの高いページからリンクされるページを重要とみなす",
+        "ページの文字数が多いほど重要とみなす",
+        "更新日時が新しいほど重要とみなす",
+        "広告費を多く払ったページを重要とみなす"
+      ],
+      "answerIndex": 0,
+      "explanation": "PageRank (1998, Page & Brin)。リンク構造をグラフ理論で解析し「重要度」順に並べる。ランダムサーファーモデルも併用。"
+    },
+    {
+      "id": "l13-01",
+      "lecture": 13,
+      "topic": "DRM",
+      "type": "term",
+      "question": "DRM は何の略か? (英語のフルスペルで回答)",
+      "answers": [
+        "Digital Rights Management",
+        "デジタルライツマネジメント",
+        "digitalrightsmanagement"
+      ],
+      "explanation": "DRM = Digital Rights Management。デジタルコンテンツの著作権・利用権を管理する技術。略の展開まで問うと先生が予告済み。"
+    },
+    {
+      "id": "l13-02",
+      "lecture": 13,
+      "topic": "DRM",
+      "type": "choice",
+      "question": "DRM が必要とされる理由として正しいものはどれか?",
+      "choices": [
+        "デジタルコンテンツは劣化なく複製できるため、不正コピー・無断配布から著作者や販売者の権利を守る必要がある",
+        "通信速度を上げるため",
+        "ファイルサイズを圧縮するため",
+        "画質を向上させるため"
+      ],
+      "answerIndex": 0,
+      "explanation": "デジタルデータは完全な複製が容易なため、暗号化とライセンス認証で不正利用を防ぎ権利を守る仕組みが必要。"
+    },
+    {
+      "id": "l13-03",
+      "lecture": 13,
+      "topic": "DRM",
+      "type": "choice",
+      "question": "DRM が制御する内容の組み合わせとして正しいものはどれか?",
+      "choices": [
+        "閲覧できる端末・利用期間・再生回数・コピーや印刷の可否",
+        "画面の解像度・色数・フレームレート",
+        "通信経路・パケットサイズ・ポート番号",
+        "ファイル名・拡張子・保存場所"
+      ],
+      "answerIndex": 0,
+      "explanation": "コンテンツを暗号化し、DRM 認証サーバでライセンスキーと端末識別子を管理して、端末・期間・回数・コピー可否などを制御する。"
+    },
+    {
+      "id": "l13-04",
+      "lecture": 13,
+      "topic": "証明書・認証",
+      "type": "choice",
+      "question": "デジタル証明書の役割として正しいものはどれか?",
+      "choices": [
+        "公開鍵とその所有者の対応を認証局が証明する",
+        "通信を高速化する",
+        "パスワードを保存する",
+        "ウイルスを検出する"
+      ],
+      "answerIndex": 0,
+      "explanation": "デジタル証明書 (X.509 など) は公開鍵と所有者の対応を証明する。C2PA のコンテンツ来歴も証明書によるデジタル署名で信頼を担保している。"
+    },
+    {
+      "id": "l13-05",
+      "lecture": 13,
+      "topic": "MMT",
+      "type": "term",
+      "question": "IP ネットワークでの利用を前提に作られた、MPEG-2 TS の後継にあたるマルチメディア伝送方式は? (アルファベット3文字)",
+      "answers": [
+        "MMT",
+        "mpeg media transport"
+      ],
+      "explanation": "MMT (MPEG Media Transport)。放送と通信の融合 (IP 配信) を前提に設計され、新4K8K衛星放送で採用されている。"
+    },
+    {
+      "id": "l13-06",
+      "lecture": 13,
+      "topic": "MMT",
+      "type": "choice",
+      "question": "MMT と MPEG-2 TS の違いとして正しいものはどれか?",
+      "choices": [
+        "MMT は IP ネットワーク配信を前提とした設計、TS は従来の放送波 (電波) 向けの設計",
+        "MMT は音声専用、TS は映像専用",
+        "MMT は可逆圧縮、TS は非可逆圧縮",
+        "MMT はアナログ放送用の規格"
+      ],
+      "answerIndex": 0,
+      "explanation": "TS は誤りのある放送伝送路向けの 188byte 固定長設計。MMT は IP 配信を前提に、放送と通信で同じコンテンツを扱いやすくした。"
+    },
+    {
+      "id": "l13-07",
+      "lecture": 13,
+      "topic": "ハイブリッドサービス",
+      "type": "choice",
+      "question": "ハイブリッドサービスの説明として正しいものはどれか?",
+      "choices": [
+        "放送と通信 (インターネット) を組み合わせ、広く浅い情報を電波で・深い情報をネットで届けるサービス",
+        "2つのテレビ局が共同で放送すること",
+        "アナログとデジタルを同時に放送すること",
+        "電気自動車向けの放送サービス"
+      ],
+      "answerIndex": 0,
+      "explanation": "放送網とインターネットを組み合わせた複合サービス。見逃し配信 (キャッチアップサービス: TVer, NHKオンデマンド) などが例。"
+    },
+    {
+      "id": "n01-01",
+      "lecture": 1,
+      "topic": "アナログとデジタル",
+      "type": "term",
+      "question": "CMY のインクを重ねると黒に近づく、印刷で使われる混色方式を何というか?",
+      "answers": [
+        "減法混色",
+        "減色混色",
+        "subtractive color"
+      ],
+      "explanation": "減法混色=CMY (印刷、重ねると黒)。加法混色=RGB (ディスプレイ、重ねると白) と対で覚える。"
+    },
+    {
+      "id": "n01-02",
+      "lecture": 1,
+      "topic": "アナログとデジタル",
+      "type": "choice",
+      "question": "情報をデジタル化するメリットとして正しい組み合わせはどれか?",
+      "choices": [
+        "複製・伝送で劣化しない・加工や編集が容易・異なるメディアを数値として統一的に扱える",
+        "必ずデータ量が小さくなる・暗号化が不要になる",
+        "標本化が不要になる・ノイズが物理的に消える",
+        "著作権の問題が発生しなくなる"
+      ],
+      "answerIndex": 0,
+      "explanation": "デジタルの利点: 劣化なく複製・伝送できる、加工が容易、映像も音も文字も「数値」として統一処理できる。一方で完全な複製が容易なため DRM が必要になる。"
+    },
+    {
+      "id": "n01-03",
+      "lecture": 1,
+      "topic": "3つのC",
+      "type": "choice",
+      "question": "メディアの「3つのC」のうち、「コンベア (Conveyor)」が指すものはどれか?",
+      "choices": [
+        "コンテンツを提示する手段 (TV, スマホ, PC など)",
+        "標準化されたデータ形式 (AAC, JPEG など)",
+        "やり取りされる情報の内容 (ニュース・作品)",
+        "通信事業者のこと"
+      ],
+      "answerIndex": 0,
+      "explanation": "コンテンツ=情報の内容、コンテナ=標準化されたデータ形式、コンベア=提示手段。3つとも言えるように。"
+    },
+    {
+      "id": "n01-04",
+      "lecture": 1,
+      "topic": "標準化団体",
+      "type": "term",
+      "question": "ISO と IEC が合同で設置した情報技術分野の標準化委員会は? (アルファベット+数字で回答)",
+      "answers": [
+        "JTC1",
+        "JTC-1",
+        "ISO/IEC JTC1",
+        "jtc1"
+      ],
+      "explanation": "ISO/IEC JTC1 (Joint Technical Committee 1)。その SC29 で MPEG や JPEG などマルチメディア規格を標準化している。"
+    },
+    {
+      "id": "n02-01",
+      "lecture": 2,
+      "topic": "データ量計算",
+      "type": "number",
+      "question": "フル HD (1920×1080) の総画素数はいくつか? (計算して回答)",
+      "answerNumber": 2073600,
+      "unit": "画素",
+      "explanation": "1920 × 1080 = 2,073,600 ≈ 約200万画素。4K は約800万、8K は約3300万画素。"
+    },
+    {
+      "id": "n02-02",
+      "lecture": 2,
+      "topic": "標本化と量子化",
+      "type": "choice",
+      "question": "デジタル化における「標本化」の説明として正しいものはどれか?",
+      "choices": [
+        "時間・空間方向を一定間隔で離散化すること",
+        "振幅方向を有限の段階に離散化すること",
+        "周波数成分へ変換すること",
+        "符号をビット列に割り当てること"
+      ],
+      "answerIndex": 0,
+      "explanation": "標本化=時間/空間方向の離散化 (サンプリング)、量子化=振幅方向の離散化。逆で問われても答えられるように。"
+    },
+    {
+      "id": "n02-03",
+      "lecture": 2,
+      "topic": "解像度",
+      "type": "number",
+      "question": "4K の画素数は 2K (フル HD) の何倍か?",
+      "answerNumber": 4,
+      "unit": "倍",
+      "explanation": "縦横それぞれ2倍なので画素数は 4倍。同様に 8K は 4K の4倍 (2K の16倍)。"
+    },
+    {
+      "id": "n02-04",
+      "lecture": 2,
+      "topic": "規格",
+      "type": "choice",
+      "question": "HDTV (2K) の色域などを定める ITU-R 勧告はどれか?",
+      "choices": [
+        "BT.709",
+        "BT.2020",
+        "BT.601",
+        "BT.2022"
+      ],
+      "answerIndex": 0,
+      "explanation": "SDTV=BT.601、HDTV=BT.709、UHDTV (4K/8K)=BT.2020。BT.2022 は観視距離の勧告。番号と世代の対応を暗記。"
+    },
+    {
+      "id": "n02-05",
+      "lecture": 2,
+      "topic": "視覚特性",
+      "type": "number",
+      "question": "ベクション (視覚誘導性自己運動感覚) の誘導が始まる視野角はおよそ何度か?",
+      "answerNumber": 20,
+      "unit": "度",
+      "explanation": "ベクションは視野角20度あたりから誘導が始まり、80〜100度で飽和する。8K の視野角約100°はこの飽和領域をカバーする。"
+    },
+    {
+      "id": "n02-06",
+      "lecture": 2,
+      "topic": "視覚特性",
+      "type": "number",
+      "question": "視野角100° (8K 相当) のときの CFF (臨界融合周波数) はおよそ何 Hz か?",
+      "answerNumber": 80,
+      "unit": "Hz",
+      "explanation": "CFF は視野角30° (2K) で約65Hz、視野角100° (8K) で約80Hz。周辺視野はフリッカに敏感なので、大画面ほど高フレームレートが必要になる根拠。"
+    },
+    {
+      "id": "n03-01",
+      "lecture": 3,
+      "topic": "標本化定理",
+      "type": "number",
+      "question": "標本化周波数 48kHz のときのナイキスト周波数は何 kHz か? (計算して回答)",
+      "answerNumber": 24,
+      "unit": "kHz",
+      "explanation": "ナイキスト周波数 = 標本化周波数の 1/2 = 24kHz。これを超える成分はエイリアシングになる。"
+    },
+    {
+      "id": "n03-02",
+      "lecture": 3,
+      "topic": "量子化",
+      "type": "number",
+      "question": "24bit 量子化の SNR は約何 dB か? (SNR ≈ 6n dB)",
+      "answerNumber": 144,
+      "unit": "dB",
+      "explanation": "SNR ≈ 6dB × ビット数。8bit→48dB、16bit→96dB、24bit→144dB。式ごと覚えれば何bitでも出せる。"
+    },
+    {
+      "id": "n03-03",
+      "lecture": 3,
+      "topic": "データ量計算",
+      "type": "number",
+      "question": "CD (44.1kHz / 16bit / 2ch) の非圧縮ビットレートは約何 kbps か? (44100×16×2 を計算)",
+      "answerNumber": 1411.2,
+      "tolerance": 1,
+      "unit": "kbps",
+      "explanation": "ビットレート = 標本化周波数 × 量子化ビット × ch数 = 44100 × 16 × 2 = 1,411,200 bps ≈ 1411kbps (約1.4Mbps)。MP3 128kbps が「約1/10」と言われる根拠。"
+    },
+    {
+      "id": "n03-04",
+      "lecture": 3,
+      "topic": "データ量計算",
+      "type": "number",
+      "question": "電話の音声符号化 G.711 (8kHz / 8bit / 1ch) のビットレートは何 kbps か?",
+      "answerNumber": 64,
+      "unit": "kbps",
+      "explanation": "8000 × 8 × 1 = 64,000 bps = 64kbps。電話の基準レートで、ISDN の 1ch もこの値。"
+    },
+    {
+      "id": "n03-05",
+      "lecture": 3,
+      "topic": "聴覚",
+      "type": "number",
+      "question": "人の可聴域の上限はおよそ何 kHz か? (CD の標本化周波数設計の根拠)",
+      "answerNumber": 20,
+      "unit": "kHz",
+      "explanation": "可聴域は約 20Hz〜20kHz。上限 20kHz × 2 = 40kHz 以上が必要 → CD は 44.1kHz。"
+    },
+    {
+      "id": "n04-01",
+      "lecture": 4,
+      "topic": "1バイトコード",
+      "type": "number",
+      "question": "ASCII コードは何 bit で1文字を表すか?",
+      "answerNumber": 7,
+      "unit": "bit",
+      "explanation": "ASCII は 7bit (128文字)。実際は1バイトに格納し、残り1bit はパリティや拡張 (Latin-1 など) に使われた。"
+    },
+    {
+      "id": "n04-02",
+      "lecture": 4,
+      "topic": "文字化け",
+      "type": "choice",
+      "question": "「文字化け」が起こる根本的な原因はどれか?",
+      "choices": [
+        "送信側と受信側が異なる文字コード (対応表) で解釈している",
+        "フォントファイルが壊れている",
+        "通信速度が遅すぎる",
+        "ディスプレイの解像度が足りない"
+      ],
+      "answerIndex": 0,
+      "explanation": "文字は数値で保存されるため、書いた側と読む側で「数値↔文字」の対応表 (文字コード) が食い違うと別の文字に化ける。"
+    },
+    {
+      "id": "n04-03",
+      "lecture": 4,
+      "topic": "実在のコード",
+      "type": "term",
+      "question": "Unix 系 OS で伝統的に使われてきた日本語文字コードは? (BML でも採用されている)",
+      "answers": [
+        "EUC-JP",
+        "EUC",
+        "eucjp",
+        "日本語EUC"
+      ],
+      "explanation": "EUC-JP。Windows=Shift_JIS、Unix 系=EUC-JP (現在は UTF-8 が主流)、メール=JIS (ISO-2022-JP) という住み分けだった。"
+    },
+    {
+      "id": "n04-04",
+      "lecture": 4,
+      "topic": "Unicode",
+      "type": "choice",
+      "question": "UTF-8 が Web を中心に普及した最大の理由はどれか?",
+      "choices": [
+        "ASCII と互換性があり、英数字は従来どおり1バイトのまま扱えるから",
+        "全文字が固定2バイトで処理が簡単だから",
+        "日本語専用に設計されたから",
+        "暗号化機能を内蔵しているから"
+      ],
+      "answerIndex": 0,
+      "explanation": "UTF-8 は ASCII 部分が完全互換 (1バイト)。既存の英語圏のシステム・データをそのまま活かせたことが普及の決め手。"
+    },
+    {
+      "id": "n05-01",
+      "lecture": 5,
+      "topic": "USB",
+      "type": "number",
+      "question": "USB 3.0 の最大転送速度は何 Gbps か?",
+      "answerNumber": 5,
+      "unit": "Gbps",
+      "explanation": "USB1.1=12Mbps → 2.0=480Mbps → 3.0=5Gbps → 3.1=10Gbps → 3.2=20Gbps → USB4=40Gbps。倍々で覚える。"
+    },
+    {
+      "id": "n05-02",
+      "lecture": 5,
+      "topic": "USB",
+      "type": "number",
+      "question": "USB4 の最大転送速度は何 Gbps か?",
+      "answerNumber": 40,
+      "unit": "Gbps",
+      "explanation": "USB4 は最大 40Gbps (Thunderbolt 3 ベース)。世代と速度の対応は数字系の頻出ポイント。"
+    },
+    {
+      "id": "n05-03",
+      "lecture": 5,
+      "topic": "IF の分類",
+      "type": "choice",
+      "question": "S/PDIF の光デジタル接続 (TOSLINK) が伝送に使うものはどれか?",
+      "choices": [
+        "光 (光ファイバ)",
+        "電気 (同軸ケーブル)",
+        "電波 (無線)",
+        "磁気"
+      ],
+      "answerIndex": 0,
+      "explanation": "S/PDIF には光 (TOSLINK) と同軸 (RCA) の2形式がある。光はノイズに強く、グランドループも切れる。"
+    },
+    {
+      "id": "n05-04",
+      "lecture": 5,
+      "topic": "相互接続性",
+      "type": "choice",
+      "question": "相互接続性を成立させるために揃える必要がある3つのレイヤの組み合わせはどれか?",
+      "choices": [
+        "コネクタ形状 (物理)・電気特性・データ形式",
+        "価格・ブランド・発売時期",
+        "OS・アプリ・ドライバ",
+        "色・サイズ・重量"
+      ],
+      "answerIndex": 0,
+      "explanation": "物理 (コネクタ形状)・電気 (信号レベル)・データ形式の3レイヤが揃って初めて「接続できる」。その上で実際に動くのが相互運用性。"
+    },
+    {
+      "id": "n06-01",
+      "lecture": 6,
+      "topic": "ファイル識別",
+      "type": "term",
+      "question": "ファイル先頭にある、ファイル種別を識別するための固有のバイト列を何というか? (カタカナまたは英語で)",
+      "answers": [
+        "マジックナンバー",
+        "magic number",
+        "マジックナンバ",
+        "magicnumber"
+      ],
+      "explanation": "magic number。PNG なら 89 50 4E 47…など。拡張子は書き換えられるが、magic number でファイルの真の種別を判定できる。"
+    },
+    {
+      "id": "n06-02",
+      "lecture": 6,
+      "topic": "ファイル識別",
+      "type": "choice",
+      "question": "拡張子とファイルヘッダの関係として正しいものはどれか?",
+      "choices": [
+        "拡張子は名前の一部にすぎず書き換え可能。真の種別はヘッダ (magic number) で判定できる",
+        "拡張子を変えればファイル形式そのものが変換される",
+        "ヘッダは拡張子のコピーが入っているだけ",
+        "拡張子とヘッダはどちらも OS が自動生成するので常に一致する"
+      ],
+      "answerIndex": 0,
+      "explanation": "拡張子はただのファイル名の一部。中身の形式はヘッダが示す。両者が食い違うとアプリが開けない・誤認するなどの問題が起こる。"
+    },
+    {
+      "id": "n06-03",
+      "lecture": 6,
+      "topic": "コンテナ",
+      "type": "choice",
+      "question": "コンテナフォーマットの例の組み合わせとして正しいものはどれか?",
+      "choices": [
+        "MP4・AVI・MKV (Matroska)",
+        "H.264・HEVC・AAC",
+        "JPEG・PNG・GIF",
+        "ZIP・LZH・7z"
+      ],
+      "answerIndex": 0,
+      "explanation": "MP4/AVI/MKV は映像・音声・字幕をまとめる「入れ物」。H.264/AAC は中に入る符号化方式 (コーデック)。入れ物と中身を区別する。"
+    },
+    {
+      "id": "n07-01",
+      "lecture": 7,
+      "topic": "動き補償",
+      "type": "choice",
+      "question": "動きベクトルの説明として正しいものはどれか?",
+      "choices": [
+        "前フレームのどの領域がどの方向へどれだけ動いたかを表すベクトル",
+        "画素の色の変化量を表すベクトル",
+        "カメラの物理的な移動速度",
+        "音声の周波数変化を表すベクトル"
+      ],
+      "answerIndex": 0,
+      "explanation": "動きベクトル=ブロックの移動方向と距離。これと差分だけを送るのが動き補償。探索処理が符号化側の計算量の大半を占める。"
+    },
+    {
+      "id": "n07-02",
+      "lecture": 7,
+      "topic": "規格",
+      "type": "number",
+      "question": "HEVC (H.265) は H.264 の約何倍の圧縮効率か?",
+      "answerNumber": 2,
+      "unit": "倍",
+      "explanation": "世代ごとに約2倍: H.262 (MPEG-2) → H.264 (AVC) → H.265 (HEVC) → H.266 (VVC)。4K/8K 放送は HEVC。"
+    },
+    {
+      "id": "n07-03",
+      "lecture": 7,
+      "topic": "符号割当",
+      "type": "term",
+      "question": "出現頻度の高いデータに短い符号、低いデータに長い符号を割り当てて圧縮する符号化方式は?",
+      "answers": [
+        "ハフマン符号",
+        "ハフマン符号化",
+        "huffman",
+        "ハフマン",
+        "エントロピー符号化"
+      ],
+      "explanation": "ハフマン符号 (エントロピー符号化の代表)。ジグザグスキャン+ランレングスの後に適用され、符号割当段階の中心となる。可逆な圧縮。"
+    },
+    {
+      "id": "n07-04",
+      "lecture": 7,
+      "topic": "DCT",
+      "type": "choice",
+      "question": "DCT 後の係数について正しい説明はどれか?",
+      "choices": [
+        "自然画像ではエネルギーが低周波成分に集中し、高周波成分は小さな値になる",
+        "全周波数に均等にエネルギーが分散する",
+        "高周波成分にエネルギーが集中する",
+        "係数は常に正の値になる"
+      ],
+      "answerIndex": 0,
+      "explanation": "隣接画素は似ている (相関が高い) ため低周波にエネルギーが集中。高周波係数は量子化でゼロになりやすく、これが圧縮の効く理由。"
+    },
+    {
+      "id": "n08-01",
+      "lecture": 8,
+      "topic": "AAC",
+      "type": "number",
+      "question": "AAC 128kbps は MPEG-1 (BC) の何 kbps に相当する音質とされるか?",
+      "answerNumber": 256,
+      "unit": "kbps",
+      "explanation": "AAC は後方互換性 (BC) を捨てた NBC 方式で、BC の半分のレートで同等音質。AAC 128kbps ≒ BC 256kbps。"
+    },
+    {
+      "id": "n08-02",
+      "lecture": 8,
+      "topic": "聴覚特性",
+      "type": "choice",
+      "question": "MAF (最小可聴限) の説明として正しいものはどれか?",
+      "choices": [
+        "静かな環境で人が聞き取れる最小の音圧レベル。これ以下の音は符号化しなくてよい",
+        "人が耐えられる最大の音圧レベル",
+        "マイクが拾える最小の音圧",
+        "スピーカが出せる最大音量"
+      ],
+      "answerIndex": 0,
+      "explanation": "MAF (Minimum Audible Field) = 等ラウドネス曲線の最下限。これ以下は聞こえないので符号化を省略でき、データ削減に直結する。"
+    },
+    {
+      "id": "n08-03",
+      "lecture": 8,
+      "topic": "規格",
+      "type": "number",
+      "question": "MP3 (MPEG-1 Layer III) では信号を何個のサブバンドに分割するか?",
+      "answerNumber": 32,
+      "unit": "分割",
+      "explanation": "MP3 は 32分割サブバンド + MDCT のハイブリッド構成。聴覚特性に基づき各バンドへ量子化ビットを配分する。"
+    },
+    {
+      "id": "n08-04",
+      "lecture": 8,
+      "topic": "規格",
+      "type": "choice",
+      "question": "日本のデジタル放送 (地デジ・BS) で使われている音声符号化方式はどれか?",
+      "choices": [
+        "MPEG-2 AAC",
+        "MP3",
+        "FLAC",
+        "CELP"
+      ],
+      "answerIndex": 0,
+      "explanation": "日本のデジタル放送の音声は MPEG-2 AAC。映像は MPEG-2 (地デジ) / H.264 (ワンセグ) / HEVC (4K8K)。"
+    },
+    {
+      "id": "n09-01",
+      "lecture": 9,
+      "topic": "PSI/SI",
+      "type": "choice",
+      "question": "PAT (Program Association Table) の役割として正しいものはどれか?",
+      "choices": [
+        "全チャンネルの入口となるテーブルで、各チャンネルの PMT の場所 (PID) を示す",
+        "番組名や放送時間を運ぶ",
+        "現在時刻を運ぶ",
+        "映像データ本体を運ぶ"
+      ],
+      "answerIndex": 0,
+      "explanation": "PAT (PID 0x0000) は受信の起点。PAT → PMT (1チャンネルの構成) → 各 ES とたどる。番組表の中身は EIT。"
+    },
+    {
+      "id": "n09-02",
+      "lecture": 9,
+      "topic": "放送方式",
+      "type": "choice",
+      "question": "日本の BS/CS 衛星放送の放送方式はどれか?",
+      "choices": [
+        "ISDB-S",
+        "ISDB-T",
+        "DVB-S",
+        "ATSC"
+      ],
+      "answerIndex": 0,
+      "explanation": "地上=ISDB-T、衛星 (BS/CS)=ISDB-S。日本の方式は ISDB ファミリー。欧州は DVB、米国は ATSC。"
+    },
+    {
+      "id": "n09-03",
+      "lecture": 9,
+      "topic": "MPEG-2 TS",
+      "type": "number",
+      "question": "TS パケット 188byte のうち、ヘッダは何 byte か?",
+      "answerNumber": 4,
+      "unit": "byte",
+      "explanation": "TS パケット = ヘッダ 4byte + ペイロード 184byte。同期バイト 0x47 で始まる。"
+    },
+    {
+      "id": "n09-04",
+      "lecture": 9,
+      "topic": "データ放送",
+      "type": "choice",
+      "question": "BML (データ放送) で使われている文字コードはどれか?",
+      "choices": [
+        "EUC-JP",
+        "Shift_JIS",
+        "UTF-16",
+        "ASCII"
+      ],
+      "answerIndex": 0,
+      "explanation": "BML (ARIB STD-B24) の文字コードは EUC-JP。文字コードの回と放送の回をつなぐ横断知識。"
+    },
+    {
+      "id": "n10-01",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "term",
+      "question": "ping が疎通確認に使うプロトコルは? (アルファベット4文字)",
+      "answers": [
+        "ICMP",
+        "internet control message protocol"
+      ],
+      "explanation": "ICMP (Internet Control Message Protocol)。ping は ICMP Echo Request/Reply で可否と RTT を測る。"
+    },
+    {
+      "id": "n10-02",
+      "lecture": 10,
+      "topic": "プロトコル",
+      "type": "term",
+      "question": "端末に IP アドレスなどのネットワーク設定を自動で割り当てるプロトコルは? (アルファベット4文字)",
+      "answers": [
+        "DHCP",
+        "dynamic host configuration protocol"
+      ],
+      "explanation": "DHCP (Dynamic Host Configuration Protocol)。IP アドレス・サブネットマスク・デフォルトゲートウェイ・DNS サーバを自動配布する。"
+    },
+    {
+      "id": "n10-03",
+      "lecture": 10,
+      "topic": "プロトコル",
+      "type": "choice",
+      "question": "TCP と UDP の違いとして正しいものはどれか?",
+      "choices": [
+        "TCP は再送・順序制御で信頼性を保証、UDP は保証なしだが低遅延でリアルタイム配信向き",
+        "TCP は音声専用、UDP はファイル専用",
+        "UDP の方が必ず信頼性が高い",
+        "両者は同じものの別名"
+      ],
+      "answerIndex": 0,
+      "explanation": "TCP=コネクション型・信頼性重視 (Web, メール)。UDP=コネクションレス・速度重視 (映像/音声ストリーミング, DNS)。マルチメディアで UDP が重要な理由とセットで。"
+    },
+    {
+      "id": "n11-01",
+      "lecture": 11,
+      "topic": "UXデザイン",
+      "type": "term",
+      "question": "ユーザが目的達成に至るまでの行動・思考・感情を時系列で可視化する UX 手法を何というか?",
+      "answers": [
+        "カスタマージャーニー",
+        "カスタマージャーニーマップ",
+        "customer journey",
+        "customer journey map",
+        "ジャーニーマップ"
+      ],
+      "explanation": "カスタマージャーニー (マップ)。①ペルソナ → ②カスタマージャーニー → ③ストーリーボード → ④ワイヤーフレーム → ⑤ユーザビリティテストの流れで使う。"
+    },
+    {
+      "id": "n11-02",
+      "lecture": 11,
+      "topic": "UXデザイン",
+      "type": "term",
+      "question": "画面のレイアウトや要素配置を線と枠で表した「骨組み図」を何というか?",
+      "answers": [
+        "ワイヤーフレーム",
+        "wireframe",
+        "ワイヤフレーム"
+      ],
+      "explanation": "ワイヤーフレーム。色や装飾を入れる前に情報構造・配置を検討するための設計図。プロトタイプの前段階。"
+    },
+    {
+      "id": "n11-03",
+      "lecture": 11,
+      "topic": "APIエコノミー",
+      "type": "choice",
+      "question": "API を「提供する側」のメリットとして正しいものはどれか?",
+      "choices": [
+        "自社機能・データの利用機会が拡大し、サービスの認知向上や新たな収益につながる",
+        "専門機能を開発せずに済む",
+        "開発期間とコストを削減できる",
+        "他社のサーバを無料で使える"
+      ],
+      "answerIndex": 0,
+      "explanation": "提供側=利用機会の拡大・認知向上・収益化。利用側=開発不要・期間/コスト削減。どちら側のメリットかを区別して答えられるように。"
+    },
+    {
+      "id": "n12-01",
+      "lecture": 12,
+      "topic": "メタデータ規格",
+      "type": "number",
+      "question": "Dublin Core が定める基本要素は何要素か?",
+      "answerNumber": 15,
+      "unit": "要素",
+      "explanation": "Dublin Core は Title, Creator, Subject など15要素だけの最シンプルなメタデータ規格 (ISO 15836)。国会図書館も準拠。"
+    },
+    {
+      "id": "n12-02",
+      "lecture": 12,
+      "topic": "MPEG-7",
+      "type": "term",
+      "question": "MPEG-7 で記述子や記述スキームの表記法を定義する言語 (XML Schema ベース) は? (アルファベット3文字)",
+      "answers": [
+        "DDL",
+        "description definition language",
+        "記述定義言語"
+      ],
+      "explanation": "DDL (Description Definition Language)。MPEG-7 は D (記述子)・DS (記述スキーム)・DDL の3点セットで覚える。"
+    },
+    {
+      "id": "n12-03",
+      "lecture": 12,
+      "topic": "意味と検索",
+      "type": "term",
+      "question": "一般ユーザが自由にタグ付けすることで分類を作り上げていく仕組みを何というか? (セマンティックギャップを埋める手段の1つ)",
+      "answers": [
+        "フォークソノミー",
+        "folksonomy",
+        "フォークソノミ"
+      ],
+      "explanation": "フォークソノミー (folks + taxonomy)。人力タグ付けで物理レベルと意味レベルの隔たり (セマンティックギャップ) を埋める。"
+    },
+    {
+      "id": "n13-01",
+      "lecture": 13,
+      "topic": "証明書・認証",
+      "type": "term",
+      "question": "コンテンツの来歴 (いつ・誰が・どう作り編集したか) をデジタル署名で証明する規格は? (アルファベット+数字4文字)",
+      "answers": [
+        "C2PA",
+        "c2pa"
+      ],
+      "explanation": "C2PA (Coalition for Content Provenance and Authenticity)。生成 AI 時代に「本物の写真か」を来歴で担保する。証明書によるデジタル署名を利用。"
+    },
+    {
+      "id": "n13-02",
+      "lecture": 13,
+      "topic": "証明書・認証",
+      "type": "term",
+      "question": "デジタル証明書を発行し、公開鍵と所有者の対応を保証する信頼できる第三者機関を何というか?",
+      "answers": [
+        "認証局",
+        "CA",
+        "certificate authority",
+        "certification authority"
+      ],
+      "explanation": "認証局 (CA)。CA の署名を検証することで証明書の正当性を確認できる。X.509 が証明書の標準形式。"
+    },
+    {
+      "id": "n13-03",
+      "lecture": 13,
+      "topic": "ハイブリッドサービス",
+      "type": "term",
+      "question": "放送済みの番組を一定期間インターネットで視聴できるサービス (TVer, NHK オンデマンドなど) を総称して何というか?",
+      "answers": [
+        "キャッチアップサービス",
+        "見逃し配信",
+        "キャッチアップ",
+        "catch up service",
+        "見逃し配信サービス"
+      ],
+      "explanation": "キャッチアップサービス (見逃し配信)。放送 (一斉配信) と通信 (個別・オンデマンド) を組み合わせたハイブリッドサービスの代表例。"
+    },
+    {
+      "id": "es-01",
+      "lecture": 11,
+      "topic": "UXデザイン",
+      "type": "essay",
+      "question": "UXデザインの一般的なプロセスを順番に説明し、それぞれの目的を述べよ。",
+      "modelAnswer": "UXデザインとは、製品やサービスを通じてユーザが得る体験 (User Experience) 全体を設計することである。プロセスは「調査 → 課題分析 → アイデア出し → 試作 → 評価 → 改善」の順に進む。調査でユーザの実態やニーズを把握し、課題分析で解決すべき問題を特定し、アイデア出しで解決案を発想し、試作 (プロトタイピング) で素早く形にし、評価 (ユーザテスト) で仮説を検証し、改善で結果を反映する。このサイクルを反復して体験を磨き上げる。",
+      "keyPoints": [
+        "UX = ユーザ体験 (User Experience) の設計だと述べた",
+        "調査→課題分析→アイデア→試作→評価→改善 の順序を書けた",
+        "各段階の目的を一言ずつ添えた",
+        "一度で終わりでなく反復 (サイクル) することに触れた"
+      ],
+      "explanation": "「調査・課題分析・アイデア・試作・評価・改善」の6語を順番ごと暗記。頭文字でリズムをつけて覚えるとよい。"
+    },
+    {
+      "id": "es-02",
+      "lecture": 7,
+      "topic": "視覚特性",
+      "type": "essay",
+      "question": "映像圧縮で人間の視覚特性がどのように利用されているか説明せよ。",
+      "modelAnswer": "人の目は細かい模様など高周波成分の変化に鈍感という視覚特性がある。映像符号化では DCT で画像を空間領域から周波数領域に変換し、視覚が鈍感な高周波成分ほど粗く量子化して情報を削る。これにより、人が劣化に気づきにくい部分から優先的にデータ量を削減できる。",
+      "keyPoints": [
+        "「高周波成分 (細かい模様) の変化に鈍感」という特性を書けた",
+        "DCT で周波数領域に変換することに触れた",
+        "高周波を粗く量子化して削ると書けた",
+        "劣化に気づかれにくい部分から削る、という理屈を書けた"
+      ],
+      "explanation": "「高周波に鈍感 → だから高周波を粗く量子化」の因果で1文にまとめられるように。"
+    },
+    {
+      "id": "es-03",
+      "lecture": 7,
+      "topic": "動き補償",
+      "type": "essay",
+      "question": "動き補償とは何か。また、映像圧縮率向上にどのように貢献するか説明せよ。",
+      "modelAnswer": "動き補償とは、前フレームの領域を動きベクトルの分だけずらして予測フレームを作り、実際のフレームとの差分だけを符号化する技術である。連続するフレームは内容がよく似ている (時間方向の冗長性がある) ため、フレーム全体を毎回送る代わりに動きベクトルと差分だけを送ればよく、データ量を大幅に削減でき圧縮率が向上する。",
+      "keyPoints": [
+        "動きベクトル分ずらして予測フレームを作ると書けた",
+        "差分だけを符号化すると書けた",
+        "時間方向の冗長性の除去だと述べた",
+        "差分+ベクトルだけ送るのでデータ量が減る、と貢献を書けた"
+      ],
+      "explanation": "キーワードは「動きベクトル」「予測フレーム」「差分」「時間方向の冗長性」の4つ。"
+    },
+    {
+      "id": "es-04",
+      "lecture": 8,
+      "topic": "聴覚特性",
+      "type": "essay",
+      "question": "MPEG音声圧縮で利用される聴覚特性について説明せよ。",
+      "modelAnswer": "MPEG 音響符号化では主に3つの聴覚特性を利用する。(1) 最小可聴限 (MAF) 以下の小さな音は人には聞こえないため符号化しない。(2) マスキング効果: 大きな音の近くの周波数にある小さな音は聞こえなくなるため符号化しない。(3) 等ラウドネス曲線が示すように耳の感度は周波数によって異なるため、感度に合わせて量子化ビットを配分する。聞こえない・気づかれない音を削ることでデータ量を削減する。",
+      "keyPoints": [
+        "最小可聴限 (MAF) 以下は符号化しない、を書けた",
+        "マスキング効果 (大きな音の近くの小さな音は聞こえない) を書けた",
+        "等ラウドネス曲線・周波数ごとの感度差に応じた量子化配分に触れた",
+        "「聞こえない音を符号化しない」ことでデータ削減、とまとめた"
+      ],
+      "explanation": "「MAF・マスキング・等ラウドネス」の3点セットで暗記。3つ書けて満点の型。"
+    },
+    {
+      "id": "es-05",
+      "lecture": 8,
+      "topic": "MDCT",
+      "type": "essay",
+      "question": "MDCTとDCTの違いを説明せよ。",
+      "modelAnswer": "MDCT (修正離散コサイン変換) は、変換そのものは DCT と同じ周波数領域への直交変換だが、信号を 50% オーバーラップさせて切り出してから変換する点が「修正」である。映像では 8×8 ブロックを独立に変換しても境界は目立ちにくいが、音声ではブロック境界の不連続が歪み (ノイズ) として聞こえてしまう。隣接ブロックと半分ずつ重ねて切り出すことで境界の不連続を除去し、音の歪みを防いでいる。",
+      "keyPoints": [
+        "変換自体は DCT と同じで、切り出し方が違うと書けた",
+        "50% オーバーラップという数字を書けた",
+        "音ではブロック境界の不連続が歪みとして聞こえる、という理由を書けた"
+      ],
+      "explanation": "数字「50%」と理由「境界の不連続=音の歪み」を必ずセットで。"
+    },
+    {
+      "id": "es-06",
+      "lecture": 6,
+      "topic": "ファイル構造",
+      "type": "essay",
+      "question": "ファイルヘッダとコンテナフォーマットの役割を説明せよ。",
+      "modelAnswer": "ファイルヘッダはファイル先頭に置かれる、ファイルの種類や構造を示す情報である。先頭バイト列 (magic number) により拡張子に頼らずファイル種別を識別でき、後続データの解釈方法 (サイズ・圧縮方式など) を伝える。コンテナフォーマットは映像・音声・字幕など複数のストリームを1つのファイルにまとめる「入れ物」の形式 (MP4 など) で、中身の符号化方式 (コーデック) とは独立に、多重化や同期再生の枠組みを提供する。",
+      "keyPoints": [
+        "ヘッダ = 先頭にあるファイル種別・構造を示す情報、と書けた",
+        "magic number によるファイル識別に触れた",
+        "コンテナ = 映像・音声・字幕をまとめる入れ物 (例: MP4)、と書けた",
+        "コンテナは中身のコーデックとは独立、に触れた"
+      ],
+      "explanation": "ヘッダは「識別と解釈」、コンテナは「多重化の入れ物」。役割を一言で言い分ける。"
+    },
+    {
+      "id": "es-07",
+      "lecture": 5,
+      "topic": "USB PD",
+      "type": "essay",
+      "question": "USB Power Deliveryの特徴を説明せよ。",
+      "modelAnswer": "USB Power Delivery (USB PD) は USB Type-C を使って高出力の給電を行う規格で、最大 20V×5A = 100W まで給電でき、ノート PC の充電も可能になった。特徴は、供給側が PDO (Power Data Object) で出せる電圧・電流の組を宣言し、受電側が RDO で必要なものを要求するネゴシエーションを行うことで、接続された機器に応じた最適な電圧・電流で給電できる点である。",
+      "keyPoints": [
+        "Type-C で最大 20V×5A=100W と書けた",
+        "ノート PC の充電まで可能になった、に触れた",
+        "PDO 宣言 → RDO 要求のネゴシエーションで電圧・電流を決める、と書けた",
+        "機器に応じた最適な給電ができる、とまとめた"
+      ],
+      "explanation": "数字 (20V×5A=100W) とネゴシエーション (PDO/RDO) の2本柱。"
+    },
+    {
+      "id": "es-08",
+      "lecture": 13,
+      "topic": "DRM",
+      "type": "essay",
+      "question": "DRMとは何か (なんの略かも含めて)。必要性と実現方法を説明せよ。",
+      "modelAnswer": "DRM は Digital Rights Management (デジタル著作権管理) の略で、デジタルコンテンツの不正コピー・不正利用を防ぐ仕組みである。デジタルデータは劣化なく容易に複製できるため、著作権者の権利を守り正当な対価を確保するには技術的な保護が必要になる。実現方法としては、コンテンツを暗号化して配布し、正規のライセンス (復号鍵) を持つユーザ・機器だけが再生できるように制御する。",
+      "keyPoints": [
+        "Digital Rights Management という正式名称を書けた",
+        "必要性: デジタルは劣化なく容易に複製できるから、と書けた",
+        "実現: 暗号化 + ライセンス (鍵) 管理で正規ユーザだけ再生可、と書けた"
+      ],
+      "explanation": "「略称→必要性→実現方法」の3段構成で書く型を体に入れる。"
+    },
+    {
+      "id": "es-09",
+      "lecture": 12,
+      "topic": "MPEG-7",
+      "type": "essay",
+      "question": "MPEG-7とは何か。他のMPEG規格との違いも含めて説明せよ。",
+      "modelAnswer": "MPEG-7 (Multimedia Content Description Interface, ISO/IEC 15938) は、マルチメディアコンテンツの内容を記述するメタデータの国際規格である。MPEG-1/2/4 が映像・音声の圧縮符号化の規格であるのに対し、MPEG-7 は圧縮は行わず「記述」を標準化している点が異なる。単一の特徴の表記法を定める記述子 (D)、複数の記述ツール間の構造・関係を定める記述スキーム (DS)、それらを定義する記述定義言語 (DDL) からなり、コンテンツの検索・管理に利用される。",
+      "keyPoints": [
+        "コンテンツ内容を記述するメタデータの国際規格、と書けた",
+        "MPEG-1/2/4 は圧縮符号化、MPEG-7 は記述 (圧縮しない)、と対比できた",
+        "記述子 (D)・記述スキーム (DS)・DDL の構成要素に触れた",
+        "用途は検索・管理、に触れた"
+      ],
+      "explanation": "先生が「詳細な説明ができるように」と明言した最重要トピック。D/DS/DDL まで書けると強い。"
+    },
+    {
+      "id": "es-10",
+      "lecture": 13,
+      "topic": "MMT",
+      "type": "essay",
+      "question": "MMTが作られた背景と、MPEG2-TSとの違いを説明せよ。",
+      "modelAnswer": "MMT (MPEG Media Transport) は、放送と通信の融合が進み、放送番組をインターネット (IP ネットワーク) でも配信する時代に対応するために作られたマルチメディア伝送方式である。従来の MPEG-2 TS は誤りのある放送伝送路向けに 188 バイト固定長パケットで設計されており放送波には適していたが、IP 配信には不向きだった。MMT は IP ネットワークでの利用を前提に設計されており、放送と通信で同じコンテンツを扱いやすい。新4K8K衛星放送で採用されている。",
+      "keyPoints": [
+        "背景: 放送と通信の融合・IP 配信への対応、と書けた",
+        "TS = 放送波 (電波) 向けの設計 (188byte 固定長)、と書けた",
+        "MMT = IP ネットワーク配信を前提とした設計、と書けた",
+        "新4K8K衛星放送で採用、に触れた"
+      ],
+      "explanation": "対比の軸は「TS=放送波向け / MMT=IP向け」。背景に「放送通信融合」を必ず入れる。"
+    },
+    {
+      "id": "es-11",
+      "lecture": 12,
+      "topic": "類似画像検索",
+      "type": "essay",
+      "question": "類似画像検索を高速化する代表的な手法を説明せよ。",
+      "modelAnswer": "類似画像検索では、画像本体 (ピクセル) を毎回比較すると計算量が膨大になるため、2つの工夫で高速化する。(1) 画像本体ではなく、色・輪郭・テクスチャなどの特徴量だけを比較する。特徴量は本体よりデータ量が格段に小さい。(2) 特徴量は検索のたびに抽出するのではなく、事前に全画像から抽出してデータベース化しておく。これにより検索時は特徴量同士の比較だけで済み、高速に類似画像を見つけられる。",
+      "keyPoints": [
+        "画像本体でなく特徴量 (色・輪郭・テクスチャなど) を比較、と書けた",
+        "特徴量は事前に抽出して DB 化しておく、と書けた",
+        "検索時は特徴量比較だけで済むから速い、と理由をまとめた"
+      ],
+      "explanation": "「本体でなく特徴量」「検索時でなく事前に」の2つの対比で覚える。先生予告の頻出ポイント。"
+    },
+    {
+      "id": "es-12",
+      "lecture": 1,
+      "topic": "標準化",
+      "type": "essay",
+      "question": "標準化団体 (ISO・IEC・IEEEなど) の役割と標準化の流れを説明せよ。",
+      "modelAnswer": "標準化とは、仕様書 (規格) を制定して普及させることで、異なるメーカの機器・ソフト間の互換性や品質・安全性を確保する活動である。代表的な団体には、ISO (国際標準化機構)、IEC (電気・電子分野の国際標準化団体、ISO と合同で JTC1 を構成)、ITU (通信分野を扱う国連の専門機関、ITU-R/ITU-T)、IEEE (電気電子技術者協会)、国内では ARIB (電波産業会) がある。標準化は、規格の提案 → 委員会・作業部会での審議とドラフト作成 → 加盟国・会員による投票 → 規格としての発行、という合意形成のプロセスで進む。",
+      "keyPoints": [
+        "役割: 仕様書を制定・普及させ互換性・品質・安全性を確保、と書けた",
+        "ISO・IEC・ITU・IEEE (+ARIB) の名前と分野を挙げられた",
+        "提案→審議 (ドラフト) →投票→発行 という流れを書けた"
+      ],
+      "explanation": "団体名は「ISO=全般、IEC=電気電子、ITU=通信、IEEE=学会系、ARIB=日本の放送通信」と分野で紐づける。"
+    },
+    {
+      "id": "es-13",
+      "lecture": 9,
+      "topic": "立体テレビ",
+      "type": "essay",
+      "question": "2眼式立体テレビの仕組みと、普及しなかった理由を説明せよ。",
+      "modelAnswer": "2眼式立体テレビは、人の立体視の機構のうち両眼視差のみを利用し、左右の眼に視差のある別々の映像を提示して立体感を得る方式である。普及しなかった理由は、(1) 専用メガネが煩わしい、(2) 立体コンテンツが少ない、(3) 輻輳 (眼の向き) は物体の位置に合うのにピント (焦点調節) はスクリーン面に固定されるという矛盾が生じ、視覚疲労を起こす、の3点である。その後、業界の関心はメガネ不要で高精細な 4K/8K へ移った。",
+      "keyPoints": [
+        "両眼視差のみを利用する仕組み、と書けた",
+        "メガネの煩わしさ・コンテンツ不足を挙げた",
+        "輻輳と焦点調節の矛盾による視覚疲労を書けた"
+      ],
+      "explanation": "理由は「メガネ・コンテンツ・視覚疲労」の3点セット。疲労の原因 (輻輳と焦点調節の矛盾) まで書けると差がつく。"
+    },
+    {
+      "id": "es-14",
+      "lecture": 11,
+      "topic": "API",
+      "type": "essay",
+      "question": "APIエコノミーとは何か。提供側・利用側双方のメリットを説明せよ。",
+      "modelAnswer": "API エコノミーとは、自社の機能やデータを API として公開し、他社がそれを組み合わせて利用することで、新しいサービスや価値を生み出す経済圏 (ビジネス) のことである。提供側のメリットは、自社機能が多くのサービスに組み込まれることで利用が拡大し、サービスの価値向上や収益につながること。利用側のメリットは、地図・決済・認証などの高度な機能をゼロから開発せずに、迅速かつ低コストで自社サービスに組み込めることである。",
+      "keyPoints": [
+        "API 公開・組み合わせで新しい価値を生む経済圏、と定義できた",
+        "提供側: 利用拡大・価値向上・収益、を書けた",
+        "利用側: ゼロから作らず迅速・低コストに高機能を実現、を書けた"
+      ],
+      "explanation": "定義+提供側+利用側の3段で書く。具体例 (地図 API・決済 API) を1つ添えると説得力が出る。"
+    },
+    {
+      "id": "es-15",
+      "lecture": 4,
+      "topic": "文字コード",
+      "type": "essay",
+      "question": "1バイト文字と2バイト文字が混在するとどのような問題が発生するか説明せよ。",
+      "modelAnswer": "1バイト文字と2バイト文字が混在すると、文字数とバイト数が一致しなくなるため、文字数のカウントや文字列の切り出しが単純なバイト計算ではできなくなる。バイト単位で機械的に切り出すと2バイト文字の途中で分断され、文字化けが発生する。また、どのバイトが文字の先頭かを判定する処理が必要になり、判定を誤ると以降の文字列全体が化ける。",
+      "keyPoints": [
+        "文字数とバイト数が一致しない (カウントが単純にできない)、と書けた",
+        "バイト単位の切り出しで文字の途中で切れて文字化けする、と書けた",
+        "文字境界の判定処理が必要になる、に触れた"
+      ],
+      "explanation": "「数えられない・切れない・化ける」の3点で覚える。"
+    },
+    {
+      "id": "es-16",
+      "lecture": 7,
+      "topic": "符号化プロセス",
+      "type": "essay",
+      "question": "映像の圧縮符号化プロセスを順序どおりに挙げ、各段階で何をするか説明せよ。(○○処理→○○処理→○○処理→○○処理)",
+      "modelAnswer": "映像の圧縮符号化は「時間方向の処理 → 空間方向の処理 → 量子化 → 符号割当」の4段階で行う。時間方向の処理では動き補償 (フレーム間予測) で前後フレームとの差分だけを取り出す。空間方向の処理では DCT で周波数領域に変換し、エネルギーを低周波に集中させる。量子化では視覚が鈍感な高周波成分ほど粗く量子化して情報を削る (非可逆圧縮の中心)。符号割当ではジグザグスキャン後にランレングス・ハフマン符号などのエントロピー符号化でビット列に変換する。なお音響符号化は、ここから空間方向の処理を除いた形になっている。",
+      "keyPoints": [
+        "時間方向 (動き補償) → 空間方向 (DCT) → 量子化 → 符号割当 の順序を書けた",
+        "各段階の中身 (動き補償 / DCT / 粗い量子化 / エントロピー符号化) を対応づけた",
+        "音響符号化は空間処理を除いた形、に触れた (加点)"
+      ],
+      "explanation": "先生が「○○処理→○○処理→…」と順序を出すと予告した問題。順序を空で言えるまで反復。"
+    },
+    {
+      "id": "es-17",
+      "lecture": 3,
+      "topic": "標本化周波数",
+      "type": "essay",
+      "question": "CD・映像メディア・電話の標本化周波数を挙げ、それぞれなぜその値に設定されているか説明せよ。",
+      "modelAnswer": "標本化定理により、最大周波数の2倍以上で標本化すれば元の信号を復元できる。CD は 44.1kHz で、人の可聴域の上限約 20kHz の2倍 (40kHz) 以上を余裕を持って満たす値である。DVD・BD・デジタル放送など映像系メディアは 48kHz が主流。電話は音声帯域を 300Hz〜3.4kHz に制限しているため、その2倍以上の 8kHz で標本化している。",
+      "keyPoints": [
+        "標本化定理 (最大周波数の2倍以上) を根拠として書けた",
+        "CD=44.1kHz と「可聴域 20kHz×2 以上」の理由を書けた",
+        "映像系=48kHz を書けた",
+        "電話=8kHz と「帯域 300Hz〜3.4kHz」の理由を書けた"
+      ],
+      "explanation": "数値は理由 (定理×帯域) とセットで覚えると忘れない。44.1 / 48 / 8 の3つ。"
+    },
+    {
+      "id": "es-18",
+      "lecture": 2,
+      "topic": "視野角と観視距離",
+      "type": "essay",
+      "question": "画素数 (HDTV・4K・8K) と標準観視距離・視野角の関係を表の形で挙げ、なぜそうなるのか説明せよ。",
+      "modelAnswer": "標準観視距離は画面高さ H を基準に、HDTV (2K) = 3.2H (視野角約31°)、4K = 1.6H (約58°)、8K = 0.75H (約96°) と定められている。根拠は、視力 1.0 の人が識別できる限界が視角1分 (1/60度) であることで、この距離まで近づいても画素の粒が見分けられない。画素密度が高いほど画面に近づいて見られるため観視距離が短くなり、視野角が大きくなって臨場感が増す。",
+      "keyPoints": [
+        "HDTV=3.2H / 4K=1.6H / 8K=0.75H の表を書けた",
+        "視野角 約31° / 58° / 96° を対応づけられた",
+        "根拠: 視力1.0 の識別限界 = 視角1分、を書けた",
+        "画素密度が高いほど近づける → 視野角増 → 臨場感増、の因果を書けた"
+      ],
+      "explanation": "先生が「表」と明言。3.2 → 1.6 → 0.75 (半分ずつ)、31° → 58° → 96° で覚える。"
+    },
+    {
+      "id": "es-19",
+      "lecture": 8,
+      "topic": "聴覚特性",
+      "type": "essay",
+      "question": "等ラウドネス曲線とは何か説明せよ。",
+      "modelAnswer": "等ラウドネス曲線とは、異なる周波数の純音が人に「同じ大きさに聞こえる」音圧レベルを結んだ曲線である (ISO 226)。人の耳の感度は周波数によって異なり、低音や高音には鈍感で、2〜4kHz 付近が最も敏感である。最下限の曲線は最小可聴限 (MAF) を表し、これ以下の音は聞こえないため、音響符号化では符号化を省略してデータ量削減に利用される。",
+      "keyPoints": [
+        "「同じ大きさに聞こえる音圧を周波数ごとに結んだ曲線」と定義できた",
+        "耳の感度は周波数で異なる (低音・高音に鈍感) と書けた",
+        "最下限 = 最小可聴限 (MAF)、符号化省略に使う、に触れた"
+      ],
+      "explanation": "定義 → 感度差 → 符号化への応用、の順で書くと1問で聴覚特性の半分をカバーできる。"
+    },
+    {
+      "id": "es-20",
+      "lecture": 13,
+      "topic": "ハイブリッドサービス",
+      "type": "essay",
+      "question": "ハイブリッドサービスとはどういうものか説明せよ。",
+      "modelAnswer": "ハイブリッドサービスとは、放送と通信 (インターネット) を組み合わせた複合サービスである。広く浅い情報は放送 (電波) で多数の視聴者に一斉配信し、個人の要求に応じた深い情報は通信で個別に届ける、という役割分担をする。例として、放送した番組をネットで後から視聴できる見逃し配信 (キャッチアップサービス: TVer、NHK オンデマンドなど) がある。",
+      "keyPoints": [
+        "放送と通信の組み合わせ、と定義できた",
+        "放送=広く一斉 / 通信=個別・深い、という役割分担を書けた",
+        "例 (見逃し配信・TVer など) を挙げられた"
+      ],
+      "explanation": "定義だけでなく「電波=一斉・ネット=個別」の役割分担まで書くのが満点の型。"
+    },
+    {
+      "id": "es-21",
+      "lecture": 10,
+      "topic": "コマンド",
+      "type": "essay",
+      "question": "ネットワーク接続の確認に使う代表的なコマンドを4つ挙げ、それぞれの用途を説明せよ。",
+      "modelAnswer": "(1) ping: 相手ホストに ICMP パケットを送り、通信の可否と応答時間 (RTT) を確認する。(2) traceroute (Windows では tracert): 宛先までパケットが経由するルータの経路を順に調べ、どこで遅延・障害が起きているか特定する。(3) nslookup: DNS サーバに問い合わせ、ホスト名と IP アドレスの名前解決を確認する。(4) ipconfig (Windows) / ifconfig・ip (Unix 系): 自分のマシンの IP アドレスなどネットワーク設定を表示する。",
+      "keyPoints": [
+        "ping = 疎通確認・応答時間 (ICMP)、を書けた",
+        "traceroute/tracert = 経路調査、を書けた",
+        "nslookup = DNS の名前解決確認、を書けた",
+        "ipconfig/ifconfig = 自機のネットワーク設定表示、を書けた"
+      ],
+      "explanation": "OS による名前の違い (traceroute/tracert、ipconfig/ifconfig) も問われがち。"
+    },
+    {
+      "id": "es-22",
+      "lecture": 11,
+      "topic": "モバイルアプリ",
+      "type": "essay",
+      "question": "モバイルアプリケーションの構築方法を挙げ、それぞれの特徴 (長所・短所) を説明せよ。",
+      "modelAnswer": "主な構築方法にネイティブアプリ開発とクロスプラットフォーム開発がある。ネイティブアプリは OS ごとに専用言語 (iOS は Swift、Android は Kotlin など) で開発する方式で、性能が高く OS 固有機能への追従に優れるが、OS ごとに別々の開発が必要でコストがかかる。クロスプラットフォーム開発は Flutter や React Native などを使い、1つのコードで複数 OS 向けに開発する方式で、開発効率が高い一方、性能や OS の新機能への追従では不利になることがある。",
+      "keyPoints": [
+        "ネイティブ = OS ごとに専用言語 (Swift/Kotlin) で開発、と書けた",
+        "ネイティブの長所 (性能・OS 機能) と短所 (OS ごとの開発コスト) を書けた",
+        "クロスプラットフォーム = 1コードで複数 OS (Flutter/React Native)、と書けた",
+        "クロスの長所 (効率) と短所 (性能・新機能追従) を書けた"
+      ],
+      "explanation": "方式名 + 代表技術 + 長短のセットで書く。Swift/Kotlin と Flutter/React Native は固有名詞で。"
+    },
+    {
+      "id": "es-23",
+      "lecture": 12,
+      "topic": "メタデータ",
+      "type": "essay",
+      "question": "メタデータとはどのようなものか。代表的な規格も挙げて説明せよ。",
+      "modelAnswer": "メタデータとは「データを説明するためのデータ (data for data)」である。コンテンツ本体 (エッセンス) ではなくその説明情報を検索対象にすることで、本体より格段に小さいデータ量で高速に検索でき、画像・映像の検索をテキスト検索に置き換えられる。代表的な規格として、マルチメディアコンテンツの内容記述を標準化した MPEG-7 (ISO/IEC 15938) がある。",
+      "keyPoints": [
+        "「データを説明するデータ (data for data)」と定義できた",
+        "本体 (エッセンス) より小さいので高速に検索できる、という利点を書けた",
+        "規格として MPEG-7 を挙げられた"
+      ],
+      "explanation": "定義は英語の \"data for data\" ごと覚えると書きやすい。規格名 MPEG-7 は必ず添える。"
+    },
+    {
+      "id": "es-24",
+      "lecture": 13,
+      "topic": "証明書",
+      "type": "essay",
+      "question": "デジタル証明書とは何か。その役割と、認証の仕組みを説明せよ。",
+      "modelAnswer": "デジタル証明書は、公開鍵とその所有者の対応関係を、信頼できる第三者機関である認証局 (CA) がデジタル署名して証明するデータである (X.509 など)。通信相手が本物であることを確認でき、なりすましを防げるため、TLS などの暗号通信やデジタル署名の信頼の基盤になる。受け取った側は CA の署名を検証することで、証明書に載っている公開鍵が確かにその相手のものだと確認できる。",
+      "keyPoints": [
+        "公開鍵と所有者の対応を証明するもの、と書けた",
+        "認証局 (CA) が署名して保証する、と書けた",
+        "なりすまし防止・暗号通信 (TLS) の信頼の基盤、という役割を書けた"
+      ],
+      "explanation": "「公開鍵 × 所有者 × CA の署名」の三角関係を図でイメージして覚える。"
+    }
+  ]
+}

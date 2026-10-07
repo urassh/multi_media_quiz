@@ -35,4 +35,13 @@ Vite プロジェクトとしてそのままデプロイ可能。
 
 ## 問題の追加・修正
 
-`src/questions.ts` の `QUESTIONS` 配列を編集する。型は `src/types.ts` を参照。
+クイズデータは `data/multi_media.json` に格納している。
+
+```jsonc
+{
+  "lectureLabels": { "1": "第1回 イントロ・標準化", ... },
+  "questions": [ { "id": "l01-01", "lecture": 1, "topic": "...", "type": "choice", ... } ]
+}
+```
+
+問題を追加・修正する場合はこの `questions` 配列を編集する。各タイプが持つフィールドの定義は `src/types.ts` の `Question` 型を参照 (`src/questions.ts` が JSON を読み込んで型を付けている)。
