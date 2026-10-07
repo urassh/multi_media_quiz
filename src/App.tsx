@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { QUESTIONS, LECTURE_LABELS } from './questions'
+import { SUBJECTS } from './questions'
 import type { AnswerRecord, Question, QuestionType } from './types'
 
 type Screen = 'home' | 'quiz' | 'result'
@@ -41,6 +41,7 @@ function parseNumber(s: string): number | null {
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('home')
+  const [subjectId, setSubjectId] = useState(SUBJECTS[0].id)
   const [selectedLectures, setSelectedLectures] = useState<Set<number>>(new Set())
   const [selectedTypes, setSelectedTypes] = useState<Set<QuestionType>>(new Set())
   const [count, setCount] = useState<number>(20)
@@ -49,20 +50,28 @@ export default function App() {
   const [current, setCurrent] = useState(0)
   const [records, setRecords] = useState<AnswerRecord[]>([])
 
+  const subject = SUBJECTS.find((s) => s.id === subjectId) ?? SUBJECTS[0]
+  const LECTURE_LABELS = subject.lectureLabels
+
   const lectures = useMemo(
-    () => [...new Set(QUESTIONS.map((q) => q.lecture))].sort((a, b) => a - b),
-    [],
+    () => [...new Set(subject.questions.map((q) => q.lecture))].sort((a, b) => a - b),
+    [subject],
   )
 
   const pool = useMemo(
     () =>
-      QUESTIONS.filter(
+      subject.questions.filter(
         (q) =>
           (selectedLectures.size === 0 || selectedLectures.has(q.lecture)) &&
           (selectedTypes.size === 0 || selectedTypes.has(q.type)),
       ),
-    [selectedLectures, selectedTypes],
+    [subject, selectedLectures, selectedTypes],
   )
+
+  function selectSubject(id: string) {
+    setSubjectId(id)
+    setSelectedLectures(new Set())
+  }
 
   function toggle<T>(set: Set<T>, value: T, update: (s: Set<T>) => void) {
     const next = new Set(set)
@@ -92,8 +101,23 @@ export default function App() {
   if (screen === 'home') {
     return (
       <div>
-        <h1>マルチメディア記述法 クイズ</h1>
-        <p className="subtitle">第1〜13回 + 先生のテスト参考資料から出題</p>
+        <h1>{subject.title} クイズ</h1>
+        <p className="subtitle">{subject.subtitle}</p>
+
+        <div className="panel">
+          <h2>科目</h2>
+          <div className="chip-row">
+            {SUBJECTS.map((s) => (
+              <button
+                key={s.id}
+                className={`chip${s.id === subjectId ? ' active' : ''}`}
+                onClick={() => selectSubject(s.id)}
+              >
+                {s.title}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <div className="panel">
           <h2>出題範囲 (未選択 = 全範囲)</h2>

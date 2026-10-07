@@ -35,7 +35,7 @@ Vite プロジェクトとしてそのままデプロイ可能。
 
 ## 問題の追加・修正
 
-クイズデータは `data/multi_media.json` に格納している。
+クイズデータは科目ごとに `data/multi_media.json` (マルチメディア記述法)・`data/network_security.json` (ネットワークセキュリティ) に格納している。科目の追加は `src/questions.ts` の `SUBJECTS` に登録する。
 
 ```jsonc
 {
